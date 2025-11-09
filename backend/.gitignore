@@ -2,4 +2,4 @@ kolledj.code-workspace
 db.sqlite3
 venv/
 mainapp/__pycache__/
-mainapp/migrations
+
