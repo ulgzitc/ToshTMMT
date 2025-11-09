@@ -1,9 +1,18 @@
 from django.contrib import admin
+from .models import Elonlar, Yangiliklar
 
-from .models import Task
 
-@admin.register(Task)
-class TaskAdmin(admin.ModelAdmin):
-    list_display = ['id', 'title', 'slug', 'done']
+@admin.register(Elonlar)
+class ElonlarAdmin(admin.ModelAdmin):
+    list_display = ['id', 'title', 'slug', 'date']
     readonly_fields = ['slug']
     list_display_links = ['title']
+    prepopulated_fields = {'slug': ('title',)}
+
+
+@admin.register(Yangiliklar)
+class YangiliklarAdmin(admin.ModelAdmin):
+    list_display = ['id', 'title', 'slug', 'date']
+    readonly_fields = ['slug']
+    list_display_links = ['title']
+    prepopulated_fields = {'slug': ('title',)}

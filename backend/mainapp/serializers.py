@@ -1,26 +1,23 @@
 from rest_framework import serializers
-from rest_framework.reverse import reverse
+from .models import Elonlar, Yangiliklar
 
-from .models import Task
-
-class TaskSerializer(serializers.ModelSerializer):
-    description = serializers.CharField(source='context', allow_blank=True, required=False)
+class ElonlarSerializer(serializers.ModelSerializer):
     url = serializers.HyperlinkedIdentityField(
-        view_name='task-update',
+        view_name='elon',
         lookup_field = 'slug',
     )
-    delete_url = serializers.SerializerMethodField()
 
     class Meta:
-        model = Task
-        fields = [
-            'title',
-            'description',
-            'done',
-            'url',
-            'delete_url',
-        ]
+        model = Elonlar
+        fields = '__all__'
 
-    def get_delete_url(self, obj):
-        request = self.context.get('request')
-        return reverse('task-delete', kwargs={'slug':obj.slug}, request=request)
+
+class YangiliklarSerializer(serializers.ModelSerializer):
+    url = serializers.HyperlinkedIdentityField(
+        view_name='yangilik',
+        lookup_field = 'slug',
+    )
+
+    class Meta:
+        model = Yangiliklar
+        fields = '__all__'

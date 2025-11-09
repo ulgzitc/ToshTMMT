@@ -4,7 +4,8 @@ from .views import *
 
 
 urlpatterns = [
-    path('', TaskMixinView.as_view(), name='tasklist'),
-    path('<slug:slug>/', TaskUpdate.as_view(), name='task-update'),
-    path('<slug:slug>/delete/', TaskDelete.as_view(), name='task-delete')
+    path('elonlar/', ElonlarView.as_view(), name='elonlar'),
+    path('yangiliklar/', YangiliklarView.as_view(), name='yangiliklar'),
+    path('elonlar/<slug:slug>/', ElonView.as_view(), name='elon'),
+    path('yangiliklar/<slug:slug>/', YangilikView.as_view(), name='yangilik'),
 ]
