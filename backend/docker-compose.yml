@@ -1,11 +1,14 @@
+version: '3.9'
+
 services:
-  app:
-    build: 
-      context: .
+  web:
+    build: .
+    container_name: kolledj_backend
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./apps:/app
     ports:
       - "8000:8000"
-    volumes:
-      - ./apps:/kolledj
-    command: sh -c "python manage.py runserver 0.0.0.0:8000"
     environment:
       - DEBUG=1
+    depends_on: []

@@ -1,27 +1,15 @@
 FROM python:3.13-alpine
 
-ENV PATH="/scripts:${PATH}"
-
-COPY ./requirements.txt /requirements.txt
-RUN apk add --update --no-cache --virtual .tmp gcc libc-dev linux-headers
-RUN pip install -r /requirements.txt
-RUN apk del .tmp
-
-
-RUN mkdir /app
-COPY ./apps /app
 WORKDIR /app
 
-COPY ./scripts /scripts
-RUN chmod +x /scripts/*
 
-RUN mkdir -p /vol/web/media
-RUN mkdir -p /vol/web/static
+RUN apk add --no-cache gcc musl-dev libffi-dev
 
-RUN adduser -D user
-RUN chown -R user:user /vol
-RUN chmod -R 755 /vol/web 
-USER user
+COPY requirements.txt /app/
+RUN pip install --no-cache-dir -r requirements.txt
 
+COPY ./apps /app
 
-CMD ["entrypoint.sh"]
+EXPOSE 8000
+
+CMD ['python' 'manage.py' 'runserver' '0.0.0.0:8000']
