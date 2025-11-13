@@ -1,5 +1,5 @@
 kolledj.code-workspace
-db.sqlite3
+/apps/db.sqlite3
 venv/
 mainapp/__pycache__/
 
