@@ -3,7 +3,7 @@ from django.utils.text import slugify
 
 class BasePost(models.Model):
     title = models.CharField(max_length=200)
-    description = models.TextField()
+    description = models.TextField(blank=True, null=True)
     date = models.DateTimeField(auto_now_add=True)
     image = models.ImageField(upload_to='uploads/', blank=True, null=True)
     slug = models.SlugField(unique=True, blank=True)
