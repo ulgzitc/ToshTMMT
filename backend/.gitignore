@@ -1,1 +1,5 @@
 kolledj.code-workspace
+/apps/db.sqlite3
+venv/
+mainapp/__pycache__/
+
