@@ -3486,7 +3486,7 @@ p {
     border: 0;
 }
 
-#shop-list .singel-publication .cont {
+/* #shop-list .singel-publication .cont {
 	display: block;
     padding-top: 0;
 }
@@ -3510,7 +3510,59 @@ p {
 	padding: 0 20px;
 	font-size: 12px;
 	line-height: 35px;
+} */
+
+.gray-bg .container{
+    background-color: #fff;
 }
+
+.gray-bg .container .tab-content .tab-pane .justify-content-center h3{
+    text-align: center;
+    padding-top: 30px;
+	padding-bottom: 10px;
+	color: #000;
+	font-size: 30px;
+}
+
+.gray-bg .container .tab-content .tab-pane .justify-content-center .hist-container{
+    padding: 18px;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 40px;
+}
+
+.gray-bg .container .tab-content .tab-pane .justify-content-center .hist-container .hist-images-wrap{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding-top: 100px;
+    row-gap: 100px;
+}
+
+.gray-bg .container .tab-content .tab-pane .justify-content-center .hist-container .hist-text-wrap{
+    padding: 30px;
+    padding-top: 31px;
+    width: 50%;
+}
+
+.gray-bg .container .tab-content .tab-pane .justify-content-center .hist-container .hist-text-wrap p{
+    font-size:larger;
+    padding-top: 30px;
+}
+
+.gray-bg .container .tab-content .tab-pane .justify-content-center h3{
+    display: flex;
+    max-width: 60%;
+    font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+    font-size: 48px;
+	color: #1d2025;
+	margin: 0px;
+}
+
+/* .gray-bg .container .tab-content .tab-pane .justify-content-center .hist-container img{
+    width: 600px;
+} */
 
 
 /*=====================================================
