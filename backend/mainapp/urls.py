@@ -4,6 +4,7 @@ from .views import *
 
 
 urlpatterns = [
+    path('', HomepageView.as_view(), name='homepage'),
     path('elonlar/', ElonlarView.as_view(), name='elonlar'),
     path('yangiliklar/', YangiliklarView.as_view(), name='yangiliklar'),
     path('elonlar/<slug:slug>/', ElonView.as_view(), name='elon'),
