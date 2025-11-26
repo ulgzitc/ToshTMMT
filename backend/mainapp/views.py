@@ -20,40 +20,46 @@ class HomepageView(TemplateView):
 ############ Elon
 class ElonlarView(ListView):
     model = Elonlar
-    template_name = ''
-    context_object_name = 'elonlar'
-    paginate_by = 5
+    template_name = 'yangiliklar.html'
+    context_object_name = 'objects'
+    paginate_by = 2
     ordering = ['-date']
 
 class ElonView(DetailView):
     model = Elonlar
-    template_name = ''
-    context_object_name = 'elon'
+    template_name = 'yangilik.html'
+    context_object_name = 'object'
 
 ############ Yanglik
 class YangiliklarView(ListView):
     model = Yangiliklar
-    template_name = ''
-    context_object_name = 'yangiliklar'
-    paginate_by = 5
+    template_name = 'yangiliklar.html'
+    context_object_name = 'objects'
+    paginate_by = 2
     ordering = ['-date']
 
 class YangilikView(DetailView):
     model = Yangiliklar
-    template_name = ''
-    context_object_name = 'yangilik'
+    template_name = 'yangilik.html'
+    context_object_name = 'object'
 
 
 
 ############ Qo`shimcha
 class TarixView(TemplateView):
-    template_name = ''
+    template_name = 'tarix.html'
 
 class YunalishView(TemplateView):
-    template_name = ''
+    template_name = 'yonalishlar.html'
 
 class RaxbariyatView(TemplateView):
-    template_name = ''
+    template_name = 'rahbariyat.html'
 
 class HamkorlikView(TemplateView):
-    template_name = ''
+    template_name = 'hamkorlik.html'
+
+class BoglanishView(TemplateView):
+    template_name = 'boglanish'
+
+class HaqidaView(TemplateView):
+    template_name = 'haqida.html'

@@ -30,3 +30,5 @@ class Elonlar(BasePost):
 class Yangiliklar(BasePost):
     class Meta:
         verbose_name_plural = 'Yangiliklar'
+
+
