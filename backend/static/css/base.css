@@ -37,6 +37,11 @@ footer .cont{
     width: 100%;
 }
 
+header .hdr-title{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
 @media (max-width: 770px) {
     .hamkor-temp{
         width: 100%;
