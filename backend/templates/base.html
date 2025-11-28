@@ -126,25 +126,25 @@
                             <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                                 <ul class="navbar-nav mr-auto">
                                     <li class="nav-item">
-                                        <a class="active" href="{% url 'homepage' %}">Bosh Sahifa</a>
+                                        <a {% if request.resolver_match.url_name == "homepage" %}class="active"{% endif %} href="{% url 'homepage' %}">Bosh Sahifa</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="{% url 'elonlar' %}">Elonlar</a>
+                                        <a {% if request.resolver_match.url_name == "elonlar" %}class="active"{% endif %} href="{% url 'elonlar' %}">Elonlar</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="{% url 'yangiliklar' %}">Yangiliklar</a>
+                                        <a {% if request.resolver_match.url_name == "yangiliklar" %}class="active"{% endif %} href="{% url 'yangiliklar' %}">Yangiliklar</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="{% url 'tarix' %}">Tarix</a>
+                                        <a {% if request.resolver_match.url_name == "tarix" %}class="active"{% endif %} href="{% url 'tarix' %}">Tarix</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="{% url 'yunalishlar' %}">Yo`nalishlar</a>
+                                        <a {% if request.resolver_match.url_name == "yunalishlar" %}class="active"{% endif %} href="{% url 'yunalishlar' %}">Yo`nalishlar</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="{% url 'rahbariyat' %}">Raxbariyat</a>
+                                        <a {% if request.resolver_match.url_name == "rahbariyat" %}class="active"{% endif %} href="{% url 'rahbariyat' %}">Raxbariyat</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="{% url 'hamkorlik' %}">Hamkorlik</a>
+                                        <a {% if request.resolver_match.url_name == "hamkorlik" %}class="active"{% endif %} href="{% url 'hamkorlik' %}">Hamkorlik</a>
                                     </li>
                                 </ul>
                             </div>
