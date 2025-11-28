@@ -58,8 +58,5 @@ class RaxbariyatView(TemplateView):
 class HamkorlikView(TemplateView):
     template_name = 'hamkorlik.html'
 
-class BoglanishView(TemplateView):
-    template_name = 'boglanish.html'
-
 class HaqidaView(TemplateView):
     template_name = 'haqida.html'
