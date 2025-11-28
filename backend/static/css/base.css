@@ -37,15 +37,18 @@ footer .cont{
     width: 100%;
 }
 
-header .hdr-title{
+.hdr-title{
     max-width: 70%;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
 }
 
-.hdr-contact,
 .hdr-logo{
     max-width:fit-content
+}
+
+.hdr-contact{
+    max-width: fit-content;
 }
 
 @media (max-width: 770px) {

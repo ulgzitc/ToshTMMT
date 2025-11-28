@@ -1723,12 +1723,12 @@ p {
 }
 .footer-link ul li a i{
     margin-right: 8px;
-    color: #ffc600;
+    color: #fff;
     -webkit-transition: all 0.4s linear;
     transition: all 0.4s linear;
 }
 .footer-link ul li a:hover {
-    color: #ffc600;
+    color: #fff;
 }
 .footer-link ul li a:hover i{
     margin-right: 15px;
@@ -1778,7 +1778,7 @@ p {
     width: 40px;
     height: 40px;
     line-height: 35px;
-    background-color: #ffc600;
+    background-color: #1878BE;
     color: #fff;
     font-size: 28px;
     border-radius: 5px;
@@ -2268,7 +2268,7 @@ p {
     padding: 0;
 }
 .page-banner-cont .breadcrumb .breadcrumb-item {
-	color: #ffc600;
+	color: #1878BE;
 	font-size: 18px;
 	font-weight: 600;
 	margin-bottom: 2px;
@@ -2338,7 +2338,7 @@ p {
 }
 
 .courses-top-search .nav .nav-item a.active{
-    color: #ffc600;
+    color: #1878BE;
 }
 
 .courses-search{
@@ -2392,8 +2392,8 @@ p {
 }
 .courses-pagination .pagination .page-item a.active,
 .courses-pagination .pagination .page-item a:hover{
-    background-color: #ffc600;
-    border-color: #ffc600;
+    background-color: #1878BE;
+    border-color: #1878BE;
 }
 
 
