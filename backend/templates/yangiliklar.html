@@ -33,8 +33,8 @@
     
     <section id="blog-page" class="pt-90 pb-120 gray-bg">
         <div class="container">
-           <div class="row gray-bg" style="justify-content: center; text-align: center">
-               <div class="col-lg-8">
+           <div class="row" style="display:flex; justify-content: center; text-align: center">
+               <div class="pl-40 pr-40 pt-40 pb-40" style="width:100%">
 
 
                     {% if objects %}
@@ -43,17 +43,17 @@
                         <div class="singel-blog mt-30">
                             {% if object.image %}
                                 <div style="display: flex; justify-content: center;" class="blog-thum">
-                                    <img style="width:auto; height: 400px;" src="{{ object.image.url }}">
+                                    <img style="width:auto; height: auto;" src="{{ object.image.url }}">
                                 </div>
                             {% endif %}
-                            <div class="blog-cont">
-                                <a href="{% if object|get_class_name == "Yangiliklar" %}{% url 'yangilik' object.slug %}{% else %}{% url 'elon' object.slug %}{% endif %}">
+                            <div class="blog-cont" style="max-width:70%; text-align: start;">
+                                <a style="width: fit-content;" href="{% if object|get_class_name == "Yangiliklar" %}{% url 'yangilik' object.slug %}{% else %}{% url 'elon' object.slug %}{% endif %}">
                                     <h3>{{ object.title }}</h3>
                                 </a>
                                 <ul>
                                     <li><a href="#"><i class="fa fa-calendar"></i>{{ object.date }}</a></li>
                                 </ul>
-                                <p style="height: 105px; overflow: hidden; text-align: center;">{{ object.description }}</p>
+                                <p style="height: 105px; overflow: hidden; text-align: start;">{{ object.description }}</p>
                             </div>
                         </div> <!-- singel blog -->
 
@@ -75,7 +75,7 @@
                             {% endif %}
 
 
-                            <li class="page-item"><a class='active' style="background-color: #0000FE;" href="?page={{ page_obj.number }}">{{ page_obj.number }}</a></li>
+                            <li class="page-item"><a class='active' style="background-color: #0000FE;" hover href="?page={{ page_obj.number }}">{{ page_obj.number }}</a></li>
                 
 
                             {% if page_obj.has_next %}
@@ -85,6 +85,13 @@
                                     <i class="fa fa-angle-right"></i>
                                 </a>
                             </li>
+
+                            <style>
+                                .page-item a:hover{
+                                    background-color: #1878BE;
+                                    border-color: #1878BE;
+                                }
+                            </style>
                             {% endif %}
 
 
