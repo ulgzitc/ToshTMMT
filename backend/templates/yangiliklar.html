@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load my_filters %}
 
 {% block title %}Yangiliklar{% endblock %}
 
@@ -45,7 +46,9 @@
                                 </div>
                             {% endif %}
                             <div class="blog-cont">
-                                <a href="yangilik.html"><h3>{{ object.title }}</h3></a>
+                                <a href="{% if object|get_class_name == "Yangiliklar" %}{% url 'yangilik' object.slug %}{% else %}{% url 'elon' object.slug %}{% endif %}">
+                                    <h3>{{ object.title }}</h3>
+                                </a>
                                 <ul>
                                     <li><a href="#"><i class="fa fa-calendar"></i>{{ object.date }}</a></li>
                                 </ul>

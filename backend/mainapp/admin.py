@@ -15,8 +15,8 @@ class YangiliklarAdmin(admin.ModelAdmin):
     list_display_links = ['title']
     prepopulated_fields = {'slug': ('title',)}
 
-
+    
 @admin.register(Yunalishlar)
 class YunalishlarAdmin(admin.ModelAdmin):
-    list_display = ["*"]
-    
+    list_display = ['id', 'title', 'description']
+    list_display_links = ['title']

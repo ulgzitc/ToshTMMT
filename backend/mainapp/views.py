@@ -23,7 +23,7 @@ class ElonlarView(ListView):
     template_name = 'yangiliklar.html'
     context_object_name = 'objects'
     paginate_by = 2
-    ordering = ['date']
+    ordering = ['-date']
 
 class ElonView(DetailView):
     model = Elonlar
@@ -36,7 +36,7 @@ class YangiliklarView(ListView):
     template_name = 'yangiliklar.html'
     context_object_name = 'objects'
     paginate_by = 2
-    ordering = ['date']
+    ordering = ['-date']
 
 class YangilikView(DetailView):
     model = Yangiliklar
@@ -47,9 +47,9 @@ class YangilikView(DetailView):
 
 class YunalishView(ListView):
     model = Yunalishlar
+    context_object_name = 'objects'
     template_name = 'yonalishlar.html'
-    context_object_name = 'object'
-    paginate_by = 6
+    paginate_by = 2
     
 
 
@@ -57,9 +57,6 @@ class YunalishView(ListView):
 ############ Qo`shimcha
 class TarixView(TemplateView):
     template_name = 'tarix.html'
-
-class YunalishView(TemplateView):
-    template_name = 'yonalishlar.html'
 
 class RaxbariyatView(TemplateView):
     template_name = 'rahbariyat.html'
