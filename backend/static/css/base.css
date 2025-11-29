@@ -44,7 +44,11 @@ footer .cont{
 }
 
 .hdr-logo{
+<<<<<<< HEAD
     max-width:fit-content;
+=======
+    max-width: fit-content;
+>>>>>>> origin
 }
 
 .hdr-contact{
@@ -74,4 +78,8 @@ footer .cont{
     .h-row{
         flex-direction: column;
     }
+}
+
+.header-row {
+    flex-wrap: nowrap;
 }

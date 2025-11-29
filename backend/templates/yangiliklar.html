@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}Whataever the shit{% endblock %}
+{% block title %}Yangiliklar{% endblock %}
 
 {% block content %}
    
@@ -15,8 +15,8 @@
                         <h2>Yangiliklar</h2>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="./index.html">Bosh sahifa</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Yangiliklar</li>
+                                <li class="breadcrumb-item"><a href="{% url 'homepage' %}">Bosh sahifa</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">{% if request.resolver_match.url_name == "elonlar" %}Elonlar{% else %}Yangiliklar{% endif %}</li>
                             </ol>
                         </nav>
                     </div>  <!-- page banner cont -->
