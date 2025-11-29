@@ -40,7 +40,7 @@ footer .cont{
 .hdr-title{
     max-width: 70%;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .hdr-logo{
@@ -49,6 +49,22 @@ footer .cont{
 
 .hdr-contact{
     max-width: fit-content;
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    -webkit-box-flex: 0;
+    flex: 0 0 66.666667%;
+    max-width: fit-content;
+}
+
+.nwrp-row{
+    display: flex;
+    margin-right: -15px;
+    margin-left: -15px;
+    flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
 }
 
 @media (max-width: 770px) {
