@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load i18n %}
 
 
 {% block title %}Bosh sahifa{% endblock %}
@@ -13,11 +14,11 @@
                 <div class="row">
                     <div class="col-xl-7 col-lg-9">
                         <div class="slider-cont">
-                            <h1 data-animation="bounceInLeft" data-delay="1s">Ta'lim uchun to'g'ri mavzuni tanlang</h1>
+                            <h1 data-animation="bounceInLeft" data-delay="1s">{% trans "Ta'lim uchun to'g'ri mavzuni tanlang" %}</h1>
                             <p data-animation="fadeInUp" data-delay="1.3s">Donec vitae sapien ut libearo venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt  Sed fringilla mauri amet nibh.</p>
                             <ul>
-                                <li><a data-animation="fadeInUp" data-delay="1.6s" class="main-btn" href="./haqida.html">Batafsil</a></li>
-                                <li><a data-animation="fadeInUp" data-delay="1.9s" class="main-btn main-btn-2" href="./boglanish.html">Boshlash</a></li>
+                                <li><a data-animation="fadeInUp" data-delay="1.6s" class="main-btn" href="{% url 'haqida' %}">{% trans "Batafsil" %}</a></li>
+                                <li><a data-animation="fadeInUp" data-delay="1.9s" class="main-btn main-btn-2" href="#">{% trans "Boshlash" %}</a></li>
                             </ul>
                         </div>
                     </div>
@@ -30,11 +31,11 @@
                 <div class="row">
                     <div class="col-xl-7 col-lg-9">
                         <div class="slider-cont">
-                            <h1 data-animation="bounceInLeft" data-delay="1s">Ta'lim uchun to'g'ri mavzuni tanlang</h1>
+                            <h1 data-animation="bounceInLeft" data-delay="1s">{% trans "Ta'lim uchun to'g'ri mavzuni tanlang" %}</h1>
                             <p data-animation="fadeInUp" data-delay="1.3s">Donec vitae sapien ut libearo venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt  Sed fringilla mauri amet nibh.</p>
                             <ul>
-                                <li><a data-animation="fadeInUp" data-delay="1.6s" class="main-btn" href="./haqida.html">Batafsil</a></li>
-                                <li><a data-animation="fadeInUp" data-delay="1.9s" class="main-btn main-btn-2" href="./boglanish.html">Boshlash</a></li>
+                                <li><a data-animation="fadeInUp" data-delay="1.6s" class="main-btn" href="{% url 'haqida' %}">{% trans "Batafsil" %}</a></li>
+                                <li><a data-animation="fadeInUp" data-delay="1.9s" class="main-btn main-btn-2" href="#">{% trans "Boshlash" %}</a></li>
                             </ul>
                         </div>
                     </div>
@@ -47,11 +48,11 @@
                 <div class="row">
                     <div class="col-xl-7 col-lg-9">
                         <div class="slider-cont">
-                            <h1 data-animation="bounceInLeft" data-delay="1s">Ta'lim uchun to'g'ri mavzuni tanlang</h1>
+                            <h1 data-animation="bounceInLeft" data-delay="1s">{% trans "Ta'lim uchun to'g'ri mavzuni tanlang" %}</h1>
                             <p data-animation="fadeInUp" data-delay="1.3s">Donec vitae sapien ut libearo venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt  Sed fringilla mauri amet nibh.</p>
                             <ul>
-                                <li><a data-animation="fadeInUp" data-delay="1.6s" class="main-btn" href="./haqida.html">Batafsil</a></li>
-                                <li><a data-animation="fadeInUp" data-delay="1.9s" class="main-btn main-btn-2" href="./boglanish.html">Boshlash</a></li>
+                                <li><a data-animation="fadeInUp" data-delay="1.6s" class="main-btn" href="{% url 'haqida' %}">{% trans "Batafsil" %}</a></li>
+                                <li><a data-animation="fadeInUp" data-delay="1.9s" class="main-btn main-btn-2" href="#">{% trans "Boshlash" %}</a></li>
                             </ul>
                         </div>
                     </div>
@@ -70,7 +71,7 @@
                 <div class="row">
                     <div class="col-lg-4">
                         <div class="category-text pt-40">
-                            <h2>Eng zo'r bilimlar maskani taqdim etadi:</h2>
+                            <h2>{% trans "Eng zo'r bilimlar maskani taqdim etadi:" %}</h2>
                         </div>
                     </div>
                     <div class="col-lg-6 offset-lg-1 col-md-8 offset-md-2 col-sm-8 offset-sm-2 col-8 offset-2">
@@ -82,7 +83,7 @@
                                             <img src="{% static 'images/all-icon/ctg-1.png' %}" alt="Icon">
                                         </span>
                                         <span class="cont">
-                                            <span>Turizm</span>
+                                            <span>{% trans "Turizm" %}</span>
                                         </span>
                                     </span> <!-- singel category -->
                                 </a>
@@ -94,7 +95,7 @@
                                             <img src="{% static 'images/all-icon/ctg-2.png' %}" alt="Icon">
                                         </span>
                                         <span class="cont">
-                                            <span>Moliya</span>
+                                            <span>{% trans "Moliya" %}</span>
                                         </span>
                                     </span> <!-- singel category -->
                                 </a>
@@ -106,7 +107,7 @@
                                             <img src="{% static 'images/all-icon/ctg-3.png' %}" alt="Icon">
                                         </span>
                                         <span class="cont">
-                                            <span>Oshpazlik</span>
+                                            <span>{% trans "Oshpazlik" %}</span>
                                         </span>
                                     </span> <!-- singel category -->
                                 </a>
@@ -118,7 +119,7 @@
                                             <img src="{% static 'images/all-icon/ctg-4.png' %}" alt="Icon">
                                         </span>
                                         <span class="cont">
-                                            <span>Kompyuter</span>
+                                            <span>{% trans "Kompyuter" %}</span>
                                         </span>
                                     </span> <!-- singel category -->
                                 </a>
@@ -130,7 +131,7 @@
                                             <img src="{% static 'images/all-icon/ctg-2.png' %}" alt="Icon">
                                         </span>
                                         <span class="cont">
-                                            <span>Buxgalteriya</span>
+                                            <span>{% trans "Buxgalteriya" %}</span>
                                         </span>
                                     </span> <!-- singel category -->
                                 </a>
@@ -142,7 +143,7 @@
                                             <img src="{% static 'images/all-icon/ctg-6.png' %}" alt="Icon">
                                         </span>
                                         <span class="cont">
-                                            <span>Sartaroshlik</span>
+                                            <span>{% trans "Sartaroshlik" %}</span>
                                         </span>
                                     </span> <!-- singel category -->
                                 </a>
@@ -154,7 +155,7 @@
                                             <img src="{% static 'images/all-icon/ctg-7.png' %}" alt="Icon">
                                         </span>
                                         <span class="cont">
-                                            <span>Mehmonxona</span>
+                                            <span>{% trans "Mehmonxona" %}</span>
                                         </span>
                                     </span> <!-- singel category -->
                                 </a>
@@ -166,7 +167,7 @@
                                             <img src="{% static 'images/all-icon/ctg-2.png' %}" alt="Icon">
                                         </span>
                                         <span class="cont">
-                                            <span>Menejment</span>
+                                            <span>{% trans "Menejment" %}</span>
                                         </span>
                                     </span> <!-- singel category -->
                                 </a>
@@ -187,20 +188,20 @@
             <div class="row">
                 <div class="col-lg-5">
                     <div class="section-title mt-50">
-                        <h5>Biz haqimizda</h5>
-                        <h2>Xush kelibsiz!</h2>
+                        <h5>{% trans "Biz haqimizda" %}</h5>
+                        <h2>{% trans "Xush kelibsiz!" %}</h2>
                     </div> <!-- section title -->
                     <div class="about-cont">
                         <p>Lorem ipsum gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet . Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt  mauris. <br> <br> auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet . Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt  mauris</p>
-                        <a href="./haqida.html" class="main-btn mt-55">Ko'proq</a>
+                        <a href="{% url 'haqida' %}" class="main-btn mt-55">{% trans "Ko'proq" %}</a>
                     </div>
                 </div> <!-- about cont -->
                 <div class="col-lg-6 offset-lg-1">
                     <div class="about-event mt-50">
                         <div class="event-title">
-                            <h3>E'lonlar</h3>
+                            <h3>{% trans "E'lonlar" %}</h3>
                         </div>
-                        <ul>
+                        <ul>  <!--ELONLAR-->
                             <li>
                                 <div class="singel-event">
                                     <span><i class="fa fa-calendar"></i> 2 December 2018</span>
@@ -237,13 +238,13 @@
     
     <!--====== ABOUT PART ENDS ======-->
 
-    <!--====== NEWS PART START ======-->
+    <!--====== NEWS PART START  YANGILIKLAR======-->
     <section id="news-part" class="pt-115 pb-110">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
                     <div class="section-title pb-50">
-                        <h2>Yangiliklar</h2>
+                        <h2>{% trans "Yangiliklar" %}</h2>
                     </div> <!-- section title -->
                 </div>
             </div> <!-- row -->

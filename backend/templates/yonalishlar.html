@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load i18n %}
 
 {% block title %}Yo`nalishlar{% endblock %}
 
@@ -15,8 +16,8 @@
                         <h2>Bizdagi Yo'nalishlar</h2>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="./index.html">Bosh sahifa</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Yo'nalishlar</li>
+                                <li class="breadcrumb-item"><a href="./index.html">{% trans "Bosh sahifa" %}</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">{% trans "Yo'nalishlar" %}</li>
                             </ol>
                         </nav>
                     </div>  <!-- page banner cont -->

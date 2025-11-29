@@ -4,8 +4,8 @@ FROM python:3.13.3-slim-bookworm
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
-RUN apt-get update && apt-get upgrade
-RUN apt-get install gettext
+RUN apt-get update && apt-get install -y gettext \
+    && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
 
@@ -32,8 +32,12 @@ RUN mkdir -p /app/staticfiles \
 RUN mkdir -p /app/media 
 RUN chmod -R 775 /app/media
 
+RUN mkdir -p /app/locale
+RUN chmod -R 775 /app/locale
+
 RUN chown -R appuser:appuser /app/staticfiles
 RUN chown -R appuser:appuser /app/media
+RUN chown -R appuser:appuser /app/locale
 
 
 USER appuser 

@@ -1,0 +1,300 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-11-29 13:36+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+#: kolledj/settings.py:186
+msgid "English"
+msgstr ""
+
+#: kolledj/settings.py:187
+msgid "Russian"
+msgstr "Russian"
+
+#: kolledj/settings.py:188
+msgid "Uzbek"
+msgstr "Uzbek"
+
+#: mainapp/models.py:6 mainapp/models.py:36
+msgid "Title"
+msgstr "Title"
+
+#: mainapp/models.py:7 mainapp/models.py:37
+msgid "Description"
+msgstr "Description"
+
+#: mainapp/models.py:28 templates/base.html:137 templates/yangilik.html:23
+msgid "Elonlar"
+msgstr "Announcements"
+
+#: mainapp/models.py:33 templates/base.html:140 templates/base.html:192
+#: templates/index.html:246 templates/yangilik.html:25
+#: templates/yangiliklar.html:5 templates/yangiliklar.html:16
+msgid "Yangiliklar"
+msgstr "News"
+
+#: mainapp/models.py:45
+msgid "Yunalishlar"
+msgstr "Branches"
+
+#: templates/base.html:76 templates/base.html:215
+msgid "Do'stlik 2-mavzesi, 4-uy, Toshkent"
+msgstr "Do'stlik 2-massive, 4-uy, Tashkent"
+
+#: templates/base.html:83
+msgid "Murojaatlar vaqti: 9:00 - 17:00 (Dushanba - Shanba)"
+msgstr "Open time: 9:00 - 17:00 (Dushanba - Shanba)"
+
+#: templates/base.html:101
+msgid "Toshkent Turizm va Madaniy Meros texnikumi"
+msgstr "Tashkent Technical School of Tourism and Cultural Heritage"
+
+#: templates/base.html:110
+msgid "Biz bilan bog'laning:"
+msgstr "Contact us:"
+
+#: templates/base.html:134 templates/tarix.html:17
+msgid "Bosh Sahifa"
+msgstr "Homepage"
+
+#: templates/base.html:143 templates/base.html:196 templates/tarix.html:18
+msgid "Tarix"
+msgstr "Origin"
+
+#: templates/base.html:146 templates/base.html:191
+#: templates/yonalishlar.html:19
+msgid "Yo'nalishlar"
+msgstr "Branches"
+
+#: templates/base.html:149
+msgid "Raxbariyat"
+msgstr "Administration"
+
+#: templates/base.html:152 templates/hamkorlik.html:5
+#: templates/hamkorlik.html:17 templates/hamkorlik.html:21
+#: templates/hamkorlik.html:36 templates/hamkorlik.html:40
+msgid "Hamkorlik"
+msgstr "Cooperation"
+
+#: templates/base.html:175
+msgid "Toshkent Turizm va Madaniy Meros Texnikumi"
+msgstr "Tashkent Technical School of Tourism and Cultural Heritage"
+
+#: templates/base.html:190 templates/hamkorlik.html:20 templates/haqida.html:19
+#: templates/rahbariyat.html:17 templates/yangilik.html:20
+#: templates/yangiliklar.html:19 templates/yonalishlar.html:18
+msgid "Bosh sahifa"
+msgstr "Homepage"
+
+#: templates/base.html:195 templates/haqida.html:16 templates/haqida.html:20
+#: templates/haqida.html:38 templates/index.html:190
+msgid "Biz haqimizda"
+msgstr "About us"
+
+#: templates/base.html:197 templates/rahbariyat.html:14
+#: templates/rahbariyat.html:18
+msgid "Rahbariyat"
+msgstr "Administration"
+
+#: templates/base.html:206
+msgid "Bog'lanish uchun:"
+msgstr "Contact us:"
+
+#: templates/hamkorlik.html:41
+msgid "Hamkorlik uchun ma'lumot, text"
+msgstr "Information for cooperation"
+
+#: templates/hamkorlik.html:45
+msgid "Hamkorlik uchun ma'lumot qisqa"
+msgstr "Information for cooperation"
+
+#: templates/hamkorlik.html:46
+msgid "Hamkorlik uchun ma'lumot"
+msgstr "Information for cooperation"
+
+#: templates/haqida.html:39
+msgid "Toshkent Turizm va Madaniy Meros kolleji"
+msgstr "Tashkent Technical School of Tourism and Cultural Heritage"
+
+#: templates/haqida.html:56
+msgid "Bizni tanlang"
+msgstr "Choose us!"
+
+#: templates/haqida.html:63
+msgid "Maqsadimiz"
+msgstr "Our goals"
+
+#: templates/haqida.html:70
+msgid "Yana qo'shimcha"
+msgstr "More"
+
+#: templates/index.html:16 templates/index.html:33 templates/index.html:50
+msgid "Ta'lim uchun to'g'ri mavzuni tanlang"
+msgstr "Choose the right pace for education"
+
+#: templates/index.html:19 templates/index.html:36 templates/index.html:53
+msgid "Batafsil"
+msgstr "More"
+
+#: templates/index.html:20 templates/index.html:37 templates/index.html:54
+msgid "Boshlash"
+msgstr "Start"
+
+#: templates/index.html:73
+msgid "Eng zo'r bilimlar maskani taqdim etadi:"
+msgstr "The best place to learn offers:"
+
+#: templates/index.html:85
+msgid "Turizm"
+msgstr "Tourism"
+
+#: templates/index.html:97
+msgid "Moliya"
+msgstr "Finance"
+
+#: templates/index.html:109
+msgid "Oshpazlik"
+msgstr "Cooking"
+
+#: templates/index.html:121
+msgid "Kompyuter"
+msgstr "IT"
+
+#: templates/index.html:133
+msgid "Buxgalteriya"
+msgstr "Accounting"
+
+#: templates/index.html:145
+msgid "Sartaroshlik"
+msgstr "Hairdressing"
+
+#: templates/index.html:157
+msgid "Mehmonxona"
+msgstr "Hotel"
+
+#: templates/index.html:169
+msgid "Menejment"
+msgstr "Management"
+
+#: templates/index.html:191
+msgid "Xush kelibsiz!"
+msgstr "Welcome!"
+
+#: templates/index.html:195
+msgid "Ko'proq"
+msgstr "More"
+
+#: templates/index.html:201
+msgid "E'lonlar"
+msgstr "Announcements"
+
+#: templates/tarix.html:14
+msgid "Kollej Tarixi"
+msgstr "Origin"
+
+#: templates/tarix.html:38
+msgid "Toshkent Turizm va Madaniy Meros Texnikumi Tarixi"
+msgstr "Tashkent Technical School of Tourism and Cultural Heritage"
+
+#: templates/tarix.html:45
+msgid ""
+" Toshkent turizm va madaniy meros texnikumi dastlab ta’lim muassasasi "
+"sifatida 1979-yilda “Toshkent mehmonxona xo‘jaligi texnikumi”  nomi bilan "
+"tashkillashtirilgan. Usha vaqtda mazkur texnikum ushbu ta’lim yo‘nalishdagi "
+"O‘rta Osiyoda yagona ta’lim muassasasi bo‘lgan.\n"
+"        O‘zbekiston Respublikasi Vazirlar Mahkamasining 2003-yil 29-"
+"oktyabrdagi “O’rta maxsus ta’lim tizimini takomillashtirish to‘g‘risida”gi "
+"473-son qarori va o‘rta maxsus  ta’lim Markazining 2004-yil 27-yanvardagi 16-"
+"sonli buyrug‘i bilan “Toshkent mehmonxona xo’jaligi texnikumi”   “Toshkent "
+"mehmonxona xo’jaligi kasb-hunar kolleji” deb o‘zgartirilgan. \n"
+"        O‘zbekiston Respublikasi Vazirlar Mahkamasining 2009-yil 16-iyuldagi "
+"202-son qarori bilan, shunigdek , o‘rta maxsus ta’lim Markazining 2009-yil "
+"17-iyuldagi 166-sonli buyrug‘i bilan “Toshkent mehmonxona xo’jaligi kasb- "
+"hunar kolleji” “Toshkent turizm va biznes kasb- hunar kolleji” deb "
+"o‘zgartirilgan.\n"
+"        O‘zbekiston Respublikasi Prezidentining 2019-yil 6-sentyabrdagi 5812-"
+"son qarori bilan “Toshkent turizm va biznes kasb- hunar kolleji”   "
+"O‘zbekiston Respublikasi Turizmni rivojlantirish qo‘mitasi tasarrufiga "
+"o‘tkazilib, “Toshkent turizm va biznes kolleji” deb o‘zgartirilgan.\n"
+" Toshkent turizm va biznes kolleji O‘zbekiston Respublikasi Prezidentining "
+"2024-yil 16-oktyabrdagi 158-son Farmoni bilan Toshkent turizm va madaniy "
+"meros texnikumi maqomiga ega bo‘ldi.\n"
+"        O‘zbekiston Respublikasi Prezidentining 2021-yil 4-iyundagi  6199-"
+"son qarori bilan “Toshkent turizm va biznes kolleji”, “Ipak yo‘li” turizm va "
+"madaniy meros xalqaro universiteti huzuriga o‘tkazilgan. \n"
+"“Toshkent turizm va biznes kolleji” o‘z ta’lim faoliyati davomida xalq "
+"xo‘jaligining turli tarmoqlari uchun “Turizm”, Mehmonxona xo‘jaligi”, "
+"“Sartaroshlik san’ati”, “Buxgalteriya” va “Umumiy ovqatlanish” "
+"mutaxassisliklari bo‘yicha kadrlar tayyorlab kelmoqda.\n"
+"     Toshkent turizm va madaniy meros texnikumi o‘zining  45-yillik "
+"faoliyati  davomida turli mutaxassisliklar bo‘yicha 4228 – nafar "
+"bitiruvchiga  hayotga yo‘llanma bergan.   Hozirda  texnikumimiz  "
+"bitiruvchilari O‘zbekiston Respublikasi xalq xo‘jaligining xizmatlar, biznes "
+"va tadbirkorlik kabi sohalarida muvaffaqiyat bilan mehnat qilib "
+"kelishmoqda.\n"
+"     Bizning  texnikumimiz bir nechta xorijiy ta’lim muassasalari bilan "
+"hamkorlik aloqalarini o‘rnatgan jumladan, Boshqirdiston Davlat "
+"Universiteti,  “Boshqirdistonning UGNTU qoshidagi Turizm va servis "
+"instituti”, “Astana xalqaro iqtisodiyot va moliya instituti”, Xitoyning  "
+"“Jiangxi Fenglin College of Foreign Economy& Trade” kolleji, “Sankt "
+"Peterburg Turizm va mehmonxona servisi kolleji”,  8-sonli kasb -hunar "
+"kolleji (Qozog’iston), 13-sonli kasb-hunar kolleji (Qozog’iston)."
+msgstr ""
+"Tashkent Tourism and Cultural Heritage Technical School was originally "
+"established in 1979 as an educational institution under the name “Tashkent "
+"Hotel Management Technical School.” At that time, it was the only "
+"educational institution in Central Asia specializing in this field of "
+"study.\n"
+"        According to Resolution No. 473 of the Cabinet of Ministers of the "
+"Republic of Uzbekistan dated October 29, 2003, “On improving the system of "
+"secondary specialized education,” and Order No. 16 of the Center for "
+"Secondary Specialized Education dated January 27, 2004, the “Tashkent Hotel "
+"Management Technical School” was renamed to the “Tashkent Hotel Management "
+"Vocational College.”\n"
+"        In accordance with Resolution No. 202 of the Cabinet of Ministers of "
+"the Republic of Uzbekistan dated July 16, 2009, as well as Order No. 166 of "
+"the Center for Secondary Specialized Education dated July 17, 2009, the "
+"“Tashkent Hotel Management Vocational College” was renamed to the “Tashkent "
+"Tourism and Business Vocational College.”\n"
+"        According to Presidential Decree No. 5812 dated September 6, 2019, "
+"the “Tashkent Tourism and Business Vocational College” was transferred under "
+"the jurisdiction of the State Committee for the Development of Tourism of "
+"the Republic of Uzbekistan and renamed the “Tashkent Tourism and Business "
+"College.”\n"
+" The Tashkent Tourism and Business College received the status of the "
+"Tashkent Tourism and Cultural Heritage Technical School under Presidential "
+"Decree No. 158 dated October 16, 2024.\n"
+"        According to Presidential Decree No. 6199 dated June 4, 2021, the "
+"“Tashkent Tourism and Business College” was transferred under the authority "
+"of the “Silk Road” International University of Tourism and Cultural "
+"Heritage.\n"
+"During its educational activity, the “Tashkent Tourism and Business "
+"College” has been preparing specialists for various sectors of the national "
+"economy in the fields of “Tourism,” “Hotel Management,” “Hairdressing Art,” "
+"“Accounting,” and “Public Catering.”\n"
+"     Over its 45 years of activity, the Tashkent Tourism and Cultural "
+"Heritage Technical School has provided 4,228 graduates with a start into "
+"their careers across various specialties. Today, our graduates successfully "
+"work in sectors such as services, business, and entrepreneurship within the "
+"national economy of the Republic of Uzbekistan.\n"
+"     Our technical school has established cooperation with several foreign "
+"educational institutions, including Bashkortostan State University, the "
+"“Institute of Tourism and Service under UGNTU of Bashkortostan,” the Astana "
+"International Institute of Economics and Finance, China’s “Jiangxi Fenglin "
+"College of Foreign Economy & Trade,” the Saint Petersburg College of "
+"Tourism and Hotel Services, Vocational College No. 8 (Kazakhstan), and "
+"Vocational College No. 13 (Kazakhstan)."

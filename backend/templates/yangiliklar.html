@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
 {% load static %}
 {% load my_filters %}
+{% load i18n %}
 
-{% block title %}Yangiliklar{% endblock %}
+{% block title %}{% trans "Yangiliklar" %}{% endblock %}
 
 {% block content %}
    
@@ -13,10 +14,10 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="page-banner-cont">
-                        <h2>Yangiliklar</h2>
+                        <h2>{% trans "Yangiliklar" %}</h2>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="{% url 'homepage' %}">Bosh sahifa</a></li>
+                                <li class="breadcrumb-item"><a href="{% url 'homepage' %}">{% trans "Bosh sahifa" %}</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">{% if request.resolver_match.url_name == "elonlar" %}Elonlar{% else %}Yangiliklar{% endif %}</li>
                             </ol>
                         </nav>

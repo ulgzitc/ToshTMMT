@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load i18n %}
 
 {% block title %}Rahbariyat{% endblock %}
 
@@ -11,11 +12,11 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="page-banner-cont">
-                        <h2>Rahbariyat</h2>
+                        <h2>{% trans "Rahbariyat" %}</h2>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="./index.html">Bosh sahifa</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Rahbariyat</li>
+                                <li class="breadcrumb-item"><a href="./index.html">{% trans "Bosh sahifa" %}</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">{% trans "Rahbariyat" %}</li>
                             </ol>
                         </nav>
                     </div> <!-- page banner cont -->

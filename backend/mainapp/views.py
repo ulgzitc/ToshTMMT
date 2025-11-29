@@ -2,6 +2,9 @@ from django.views.generic import ListView, DetailView, TemplateView
 from django.views import View
 from django.core.paginator import Paginator
 
+from django.utils.translation import gettext as _
+from django.utils.translation import get_language, activate, gettext
+
 from .models import Elonlar, Yangiliklar, Yunalishlar
 
 

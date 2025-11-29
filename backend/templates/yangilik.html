@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
-
+{% load i18n %}
 
 {% block title %}{{ object.title }}{% endblock %}
 
@@ -17,12 +17,12 @@
                         <h2>{{ object.title }}</h2>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="{% url 'homepage' %}">Bosh sahifa</a></li>
+                                <li class="breadcrumb-item"><a href="{% url 'homepage' %}">{% trans "Bosh sahifa" %}</a></li>
 
                                 {% if request.resolver_match.url_name == "elon" %}
-                                    <li class="breadcrumb-item active" aria-current="page"><a href="{% url 'elonlar' %}">Elonlar</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page"><a href="{% url 'elonlar' %}">{% trans "Elonlar" %}</a></li>
                                 {% else %}
-                                    <li class="breadcrumb-item active" aria-current="page"><a href="{% url "yangiliklar" %}">Yangiliklar</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page"><a href="{% url "yangiliklar" %}">{% trans "Yangiliklar" %}</a></li>
                                 {% endif %}
                                 <li class="breadcrumb-item active" aria-current="page">{{ object.title }}</li>
 

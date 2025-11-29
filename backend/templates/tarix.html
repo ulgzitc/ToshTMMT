@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load i18n %}
 
 {% block title %}TTMMT haqida{% endblock %}
 
@@ -11,11 +12,11 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="page-banner-cont">
-                        <h2>Kollej Tarixi</h2>
+                        <h2>{% trans "Kollej Tarixi" %}</h2>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="./index.html">Bosh Sahifa</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Tarix</li>
+                                <li class="breadcrumb-item"><a href="./index.html">{% trans "Bosh Sahifa" %}</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">{% trans "Tarix" %}</li>
                             </ol>
                         </nav>
                     </div>  <!-- page banner cont -->
@@ -35,14 +36,14 @@
             <div class="tab-content" id="myTabContent">
               <div class="tab-pane fade show active" id="shop-grid" role="tabpanel" aria-labelledby="shop-grid-tab">
                     <div class="row justify-content-center">
-                        <h3>Toshkent Turizm va Madaniy Meros Texnikumi Tarixi</h3>
+                        <h3>{% trans "Toshkent Turizm va Madaniy Meros Texnikumi Tarixi" %}</h3>
                         <div class="hist-container">
                             <div class="hist-images-wrap">
                                 <img class="hist-image-1" src="{% static './images/shop-singel/hist-image-1.jpeg' %}" alt="kollej-foto">
                                 <img class="hist-image-2" src="{% static './images/shop-singel/hist-image-2.png' %}" alt="ochilish">
                             </div>
                             <div class="hist-text-wrap">
-                                <p class="hist">Toshkent turizm va madaniy meros texnikumi dastlab ta’lim muassasasi sifatida 1979-yilda “Toshkent mehmonxona xo‘jaligi texnikumi”  nomi bilan tashkillashtirilgan. Usha vaqtda mazkur texnikum ushbu ta’lim yo‘nalishdagi O‘rta Osiyoda yagona ta’lim muassasasi bo‘lgan.
+                                <p class="hist">{% blocktrans %} Toshkent turizm va madaniy meros texnikumi dastlab ta’lim muassasasi sifatida 1979-yilda “Toshkent mehmonxona xo‘jaligi texnikumi”  nomi bilan tashkillashtirilgan. Usha vaqtda mazkur texnikum ushbu ta’lim yo‘nalishdagi O‘rta Osiyoda yagona ta’lim muassasasi bo‘lgan.
         O‘zbekiston Respublikasi Vazirlar Mahkamasining 2003-yil 29-oktyabrdagi “O’rta maxsus ta’lim tizimini takomillashtirish to‘g‘risida”gi 473-son qarori va o‘rta maxsus  ta’lim Markazining 2004-yil 27-yanvardagi 16-sonli buyrug‘i bilan “Toshkent mehmonxona xo’jaligi texnikumi”   “Toshkent mehmonxona xo’jaligi kasb-hunar kolleji” deb o‘zgartirilgan. 
         O‘zbekiston Respublikasi Vazirlar Mahkamasining 2009-yil 16-iyuldagi 202-son qarori bilan, shunigdek , o‘rta maxsus ta’lim Markazining 2009-yil 17-iyuldagi 166-sonli buyrug‘i bilan “Toshkent mehmonxona xo’jaligi kasb- hunar kolleji” “Toshkent turizm va biznes kasb- hunar kolleji” deb o‘zgartirilgan.
         O‘zbekiston Respublikasi Prezidentining 2019-yil 6-sentyabrdagi 5812-son qarori bilan “Toshkent turizm va biznes kasb- hunar kolleji”   O‘zbekiston Respublikasi Turizmni rivojlantirish qo‘mitasi tasarrufiga o‘tkazilib, “Toshkent turizm va biznes kolleji” deb o‘zgartirilgan.
@@ -50,7 +51,7 @@
         O‘zbekiston Respublikasi Prezidentining 2021-yil 4-iyundagi  6199-son qarori bilan “Toshkent turizm va biznes kolleji”, “Ipak yo‘li” turizm va madaniy meros xalqaro universiteti huzuriga o‘tkazilgan. 
 “Toshkent turizm va biznes kolleji” o‘z ta’lim faoliyati davomida xalq xo‘jaligining turli tarmoqlari uchun “Turizm”, Mehmonxona xo‘jaligi”, “Sartaroshlik san’ati”, “Buxgalteriya” va “Umumiy ovqatlanish” mutaxassisliklari bo‘yicha kadrlar tayyorlab kelmoqda.
      Toshkent turizm va madaniy meros texnikumi o‘zining  45-yillik faoliyati  davomida turli mutaxassisliklar bo‘yicha 4228 – nafar bitiruvchiga  hayotga yo‘llanma bergan.   Hozirda  texnikumimiz  bitiruvchilari O‘zbekiston Respublikasi xalq xo‘jaligining xizmatlar, biznes va tadbirkorlik kabi sohalarida muvaffaqiyat bilan mehnat qilib kelishmoqda.
-     Bizning  texnikumimiz bir nechta xorijiy ta’lim muassasalari bilan hamkorlik aloqalarini o‘rnatgan jumladan, Boshqirdiston Davlat Universiteti,  “Boshqirdistonning UGNTU qoshidagi Turizm va servis instituti”, “Astana xalqaro iqtisodiyot va moliya instituti”, Xitoyning  “Jiangxi Fenglin College of Foreign Economy& Trade” kolleji, “Sankt Peterburg Turizm va mehmonxona servisi kolleji”,  8-sonli kasb -hunar kolleji (Qozog’iston), 13-sonli kasb-hunar kolleji (Qozog’iston).</p>
+     Bizning  texnikumimiz bir nechta xorijiy ta’lim muassasalari bilan hamkorlik aloqalarini o‘rnatgan jumladan, Boshqirdiston Davlat Universiteti,  “Boshqirdistonning UGNTU qoshidagi Turizm va servis instituti”, “Astana xalqaro iqtisodiyot va moliya instituti”, Xitoyning  “Jiangxi Fenglin College of Foreign Economy& Trade” kolleji, “Sankt Peterburg Turizm va mehmonxona servisi kolleji”,  8-sonli kasb -hunar kolleji (Qozog’iston), 13-sonli kasb-hunar kolleji (Qozog’iston).{% endblocktrans %}</p>
                             </div>
                         </div>
                         </div> <!-- row -->

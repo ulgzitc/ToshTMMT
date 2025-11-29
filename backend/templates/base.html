@@ -1,5 +1,6 @@
 {% load static %}
 {% load my_filters %}
+{% load i18n %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -48,7 +49,22 @@
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
 </head>
 
-
+<form action="{% url 'set_language' %}" method="post">
+    {% csrf_token %}
+    
+    <input name="next" type="hidden" value="{{ request.get_full_path }}">
+    
+    <select name="language" onchange="this.form.submit()">
+        {% get_current_language as CURRENT_LANGUAGE %}
+        {% get_available_languages as AVAILABLE_LANGUAGES %}
+        
+        {% for lang_code, lang_name in AVAILABLE_LANGUAGES %}
+            <option value="{{ lang_code }}" {% if lang_code == CURRENT_LANGUAGE %}selected{% endif %}>
+                {{ lang_name }}
+            </option>
+        {% endfor %}
+    </select>
+</form>
 
 <body>
     <div class="preloader">
@@ -72,14 +88,14 @@
                     <div class="col-lg-6">
                         <div class="header-contact text-lg-left text-center">
                             <ul>
-                                <li><img class="header-icon" src="{% static "images/all-icon/map.svg" %}" alt="icon"><span>Do'stlik 2-mavzesi, 4-uy, Toshkent</span></li>
+                                <li><img class="header-icon" src="{% static "images/all-icon/map.svg" %}" alt="icon"><span>{% blocktrans %}Do'stlik 2-mavzesi, 4-uy, Toshkent{% endblocktrans %}</span></li>
                                 <li><img class="header-icon" src="{% static "images/all-icon/email.svg" %}" alt="icon"><span>info@yourmail.com</span></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="header-opening-time text-lg-right text-center">
-                            <p>Murojaatlar vaqti: 9:00 - 17:00 (Dushanba - Shanba)</p>
+                            <p>{% blocktrans %}Murojaatlar vaqti: 9:00 - 17:00 (Dushanba - Shanba){% endblocktrans %}</p>
                         </div>
                     </div>
                 </div> <!-- row -->
@@ -97,7 +113,7 @@
                         </div>
                     </div>
                     <div class="ml-20">
-                        <h2 class="hdr-title">Toshkent Turizm va Madaniy Meros texnikumi</h2>
+                        <h2 class="hdr-title">{% trans "Toshkent Turizm va Madaniy Meros texnikumi" %}</h2>
                     </div>
                     <div class="col-lg-8 col-md-8 mt-25 hdr-contact" style="max-width: fit-content;">
                         <div class="support-button float-right d-none d-md-block">
@@ -106,7 +122,7 @@
                                     <img src="{% static "images/all-icon/support.png" %}" alt="icon">
                                 </div>
                                 <div class="cont">
-                                    <p>Biz bilan bog'laning:</p>
+                                    <p>{% trans "Biz bilan bog'laning:" %}</p>
                                     <span>+998-71-257-77-77</span>
                                 </div>
                             </div>
@@ -130,25 +146,25 @@
                             <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                                 <ul class="navbar-nav mr-auto">
                                     <li class="nav-item">
-                                        <a {% if request.resolver_match.url_name == "homepage" %}class="active"{% endif %} href="{% url 'homepage' %}">Bosh Sahifa</a>
+                                        <a {% if request.resolver_match.url_name == "homepage" %}class="active"{% endif %} href="{% url 'homepage' %}">{% trans "Bosh Sahifa" %}</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a {% if request.resolver_match.url_name == "elonlar" %}class="active"{% endif %} href="{% url 'elonlar' %}">Elonlar</a>
+                                        <a {% if request.resolver_match.url_name == "elonlar" %}class="active"{% endif %} href="{% url 'elonlar' %}">{% trans "Elonlar" %}</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a {% if request.resolver_match.url_name == "yangiliklar" %}class="active"{% endif %} href="{% url 'yangiliklar' %}">Yangiliklar</a>
+                                        <a {% if request.resolver_match.url_name == "yangiliklar" %}class="active"{% endif %} href="{% url 'yangiliklar' %}">{% trans "Yangiliklar" %}</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a {% if request.resolver_match.url_name == "tarix" %}class="active"{% endif %} href="{% url 'tarix' %}">Tarix</a>
+                                        <a {% if request.resolver_match.url_name == "tarix" %}class="active"{% endif %} href="{% url 'tarix' %}">{% trans "Tarix" %}</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a {% if request.resolver_match.url_name == "yunalishlar" %}class="active"{% endif %} href="{% url 'yunalishlar' %}">Yo`nalishlar</a>
+                                        <a {% if request.resolver_match.url_name == "yunalishlar" %}class="active"{% endif %} href="{% url 'yunalishlar' %}">{% trans "Yo'nalishlar" %}</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a {% if request.resolver_match.url_name == "rahbariyat" %}class="active"{% endif %} href="{% url 'rahbariyat' %}">Raxbariyat</a>
+                                        <a {% if request.resolver_match.url_name == "rahbariyat" %}class="active"{% endif %} href="{% url 'rahbariyat' %}">{% trans "Raxbariyat" %}</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a {% if request.resolver_match.url_name == "hamkorlik" %}class="active"{% endif %} href="{% url 'hamkorlik' %}">Hamkorlik</a>
+                                        <a {% if request.resolver_match.url_name == "hamkorlik" %}class="active"{% endif %} href="{% url 'hamkorlik' %}">{% trans "Hamkorlik" %}</a>
                                     </li>
                                 </ul>
                             </div>
@@ -171,7 +187,7 @@
                             <div class="logo">
                                 <a href="./index.html"><img src="{% static "images/logo-2.png" %}" alt="Logo"></a>
                             </div>
-                            <p>Toshkent Turizm va Madaniy Meros Texnikumi</p>
+                            <p>{% trans "Toshkent Turizm va Madaniy Meros Texnikumi" %}</p>
                             <ul class="mt-20">
                                 <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -186,14 +202,14 @@
                                 <h6>Navigatsiya</h6>
                             </div>
                             <ul>
-                                <li><a href="{% url 'homepage' %}"><i class="fa fa-angle-right"></i>Bosh sahifa</a></li>
-                                <li><a href="{% url 'yunalishlar' %}"><i class="fa fa-angle-right"></i>Yo'nalishlar</a></li>
-                                <li><a href="{% url 'yangiliklar' %}"><i class="fa fa-angle-right"></i>Yangiliklar</a></li>
+                                <li><a href="{% url 'homepage' %}"><i class="fa fa-angle-right"></i>{% trans "Bosh sahifa" %}</a></li>
+                                <li><a href="{% url 'yunalishlar' %}"><i class="fa fa-angle-right"></i>{% trans "Yo'nalishlar" %}</a></li>
+                                <li><a href="{% url 'yangiliklar' %}"><i class="fa fa-angle-right"></i>{% trans "Yangiliklar" %}</a></li>
                             </ul>
                             <ul>
-                                <li><a href="{% url 'haqida' %}"><i class="fa fa-angle-right"></i>Biz haqimizda</a></li>
-                                <li><a href="{% url 'tarix' %}"><i class="fa fa-angle-right"></i>Tarix</a></li>
-                                <li><a href="{% url 'rahbariyat' %}"><i class="fa fa-angle-right"></i>Rahbariyat</a></li>
+                                <li><a href="{% url 'haqida' %}"><i class="fa fa-angle-right"></i>{% trans "Biz haqimizda" %}</a></li>
+                                <li><a href="{% url 'tarix' %}"><i class="fa fa-angle-right"></i>{% trans "Tarix" %}</a></li>
+                                <li><a href="{% url 'rahbariyat' %}"><i class="fa fa-angle-right"></i>{% trans "Rahbariyat" %}</a></li>
                             </ul>
                         </div> <!-- footer link -->
                     </div>
@@ -202,7 +218,7 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-address mt-40">
                             <div class="footer-title pb-25">
-                                <h6>Bog'lanish uchun:</h6>
+                                <h6>{% trans "Bog'lanish uchun:" %}</h6>
                             </div>
                             <ul>
                                 <li>
@@ -211,7 +227,7 @@
                                         <img class="footer-icon-1" src="{% static "images/all-icon/map.svg" %}" alt="icon">
                                     </div>
                                     <div class="cont">
-                                        <p>Do'stlik 2-mavzesi, 4-uy, Toshkent</p>
+                                        <p>{% blocktrans %}Do'stlik 2-mavzesi, 4-uy, Toshkent{% endblocktrans %}</p>
                                     </div>
                                 </li>
                                 <li>

@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 
 from pathlib import Path
 import os
+from django.utils.translation import gettext_lazy as _
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -51,6 +52,7 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -177,3 +179,16 @@ CSRF_COOKIE_DOMAIN = os.environ['CSRF_COOKIE_DOMAIN']
 
 DATA_UPLOAD_MAX_MEMORY_SIZE = 52428800
 FILE_UPLOAD_MAX_MEMORY_SIZE = 52428800
+
+LANGUAGE_CODE = 'uz'
+
+LANGUAGES = (
+    ('en', _('English')),
+    ('ru', _('Russian')),
+    ('uz', _('Uzbek')),
+)
+
+
+LOCALE_PATHS = (
+    os.path.join(BASE_DIR, 'locale/'),
+)

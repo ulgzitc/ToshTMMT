@@ -1,0 +1,256 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-11-29 13:36+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+#: kolledj/settings.py:186
+msgid "English"
+msgstr ""
+
+#: kolledj/settings.py:187
+msgid "Russian"
+msgstr ""
+
+#: kolledj/settings.py:188
+msgid "Uzbek"
+msgstr ""
+
+#: mainapp/models.py:6 mainapp/models.py:36
+msgid "Title"
+msgstr ""
+
+#: mainapp/models.py:7 mainapp/models.py:37
+msgid "Description"
+msgstr ""
+
+#: mainapp/models.py:28 templates/base.html:137 templates/yangilik.html:23
+msgid "Elonlar"
+msgstr ""
+
+#: mainapp/models.py:33 templates/base.html:140 templates/base.html:192
+#: templates/index.html:246 templates/yangilik.html:25
+#: templates/yangiliklar.html:5 templates/yangiliklar.html:16
+msgid "Yangiliklar"
+msgstr ""
+
+#: mainapp/models.py:45
+msgid "Yunalishlar"
+msgstr ""
+
+#: templates/base.html:76 templates/base.html:215
+msgid "Do'stlik 2-mavzesi, 4-uy, Toshkent"
+msgstr ""
+
+#: templates/base.html:83
+msgid "Murojaatlar vaqti: 9:00 - 17:00 (Dushanba - Shanba)"
+msgstr ""
+
+#: templates/base.html:101
+msgid "Toshkent Turizm va Madaniy Meros texnikumi"
+msgstr ""
+
+#: templates/base.html:110
+msgid "Biz bilan bog'laning:"
+msgstr ""
+
+#: templates/base.html:134 templates/tarix.html:17
+msgid "Bosh Sahifa"
+msgstr ""
+
+#: templates/base.html:143 templates/base.html:196 templates/tarix.html:18
+msgid "Tarix"
+msgstr ""
+
+#: templates/base.html:146 templates/base.html:191
+#: templates/yonalishlar.html:19
+msgid "Yo'nalishlar"
+msgstr ""
+
+#: templates/base.html:149
+msgid "Raxbariyat"
+msgstr ""
+
+#: templates/base.html:152 templates/hamkorlik.html:5
+#: templates/hamkorlik.html:17 templates/hamkorlik.html:21
+#: templates/hamkorlik.html:36 templates/hamkorlik.html:40
+msgid "Hamkorlik"
+msgstr ""
+
+#: templates/base.html:175
+msgid "Toshkent Turizm va Madaniy Meros Texnikumi"
+msgstr ""
+
+#: templates/base.html:190 templates/hamkorlik.html:20 templates/haqida.html:19
+#: templates/rahbariyat.html:17 templates/yangilik.html:20
+#: templates/yangiliklar.html:19 templates/yonalishlar.html:18
+msgid "Bosh sahifa"
+msgstr ""
+
+#: templates/base.html:195 templates/haqida.html:16 templates/haqida.html:20
+#: templates/haqida.html:38 templates/index.html:190
+msgid "Biz haqimizda"
+msgstr ""
+
+#: templates/base.html:197 templates/rahbariyat.html:14
+#: templates/rahbariyat.html:18
+msgid "Rahbariyat"
+msgstr ""
+
+#: templates/base.html:206
+msgid "Bog'lanish uchun:"
+msgstr ""
+
+#: templates/hamkorlik.html:41
+msgid "Hamkorlik uchun ma'lumot, text"
+msgstr ""
+
+#: templates/hamkorlik.html:45
+msgid "Hamkorlik uchun ma'lumot qisqa"
+msgstr ""
+
+#: templates/hamkorlik.html:46
+msgid "Hamkorlik uchun ma'lumot"
+msgstr ""
+
+#: templates/haqida.html:39
+msgid "Toshkent Turizm va Madaniy Meros kolleji"
+msgstr ""
+
+#: templates/haqida.html:56
+msgid "Bizni tanlang"
+msgstr ""
+
+#: templates/haqida.html:63
+msgid "Maqsadimiz"
+msgstr ""
+
+#: templates/haqida.html:70
+msgid "Yana qo'shimcha"
+msgstr ""
+
+#: templates/index.html:16 templates/index.html:33 templates/index.html:50
+msgid "Ta'lim uchun to'g'ri mavzuni tanlang"
+msgstr ""
+
+#: templates/index.html:19 templates/index.html:36 templates/index.html:53
+msgid "Batafsil"
+msgstr ""
+
+#: templates/index.html:20 templates/index.html:37 templates/index.html:54
+msgid "Boshlash"
+msgstr ""
+
+#: templates/index.html:73
+msgid "Eng zo'r bilimlar maskani taqdim etadi:"
+msgstr ""
+
+#: templates/index.html:85
+msgid "Turizm"
+msgstr ""
+
+#: templates/index.html:97
+msgid "Moliya"
+msgstr ""
+
+#: templates/index.html:109
+msgid "Oshpazlik"
+msgstr ""
+
+#: templates/index.html:121
+msgid "Kompyuter"
+msgstr ""
+
+#: templates/index.html:133
+msgid "Buxgalteriya"
+msgstr ""
+
+#: templates/index.html:145
+msgid "Sartaroshlik"
+msgstr ""
+
+#: templates/index.html:157
+msgid "Mehmonxona"
+msgstr ""
+
+#: templates/index.html:169
+msgid "Menejment"
+msgstr ""
+
+#: templates/index.html:191
+msgid "Xush kelibsiz!"
+msgstr ""
+
+#: templates/index.html:195
+msgid "Ko'proq"
+msgstr ""
+
+#: templates/index.html:201
+msgid "E'lonlar"
+msgstr ""
+
+#: templates/tarix.html:14
+msgid "Kollej Tarixi"
+msgstr ""
+
+#: templates/tarix.html:38
+msgid "Toshkent Turizm va Madaniy Meros Texnikumi Tarixi"
+msgstr ""
+
+#: templates/tarix.html:45
+msgid ""
+" Toshkent turizm va madaniy meros texnikumi dastlab ta’lim muassasasi "
+"sifatida 1979-yilda “Toshkent mehmonxona xo‘jaligi texnikumi”  nomi bilan "
+"tashkillashtirilgan. Usha vaqtda mazkur texnikum ushbu ta’lim yo‘nalishdagi "
+"O‘rta Osiyoda yagona ta’lim muassasasi bo‘lgan.\n"
+"        O‘zbekiston Respublikasi Vazirlar Mahkamasining 2003-yil 29-"
+"oktyabrdagi “O’rta maxsus ta’lim tizimini takomillashtirish to‘g‘risida”gi "
+"473-son qarori va o‘rta maxsus  ta’lim Markazining 2004-yil 27-yanvardagi 16-"
+"sonli buyrug‘i bilan “Toshkent mehmonxona xo’jaligi texnikumi”   “Toshkent "
+"mehmonxona xo’jaligi kasb-hunar kolleji” deb o‘zgartirilgan. \n"
+"        O‘zbekiston Respublikasi Vazirlar Mahkamasining 2009-yil 16-iyuldagi "
+"202-son qarori bilan, shunigdek , o‘rta maxsus ta’lim Markazining 2009-yil "
+"17-iyuldagi 166-sonli buyrug‘i bilan “Toshkent mehmonxona xo’jaligi kasb- "
+"hunar kolleji” “Toshkent turizm va biznes kasb- hunar kolleji” deb "
+"o‘zgartirilgan.\n"
+"        O‘zbekiston Respublikasi Prezidentining 2019-yil 6-sentyabrdagi 5812-"
+"son qarori bilan “Toshkent turizm va biznes kasb- hunar kolleji”   "
+"O‘zbekiston Respublikasi Turizmni rivojlantirish qo‘mitasi tasarrufiga "
+"o‘tkazilib, “Toshkent turizm va biznes kolleji” deb o‘zgartirilgan.\n"
+" Toshkent turizm va biznes kolleji O‘zbekiston Respublikasi Prezidentining "
+"2024-yil 16-oktyabrdagi 158-son Farmoni bilan Toshkent turizm va madaniy "
+"meros texnikumi maqomiga ega bo‘ldi.\n"
+"        O‘zbekiston Respublikasi Prezidentining 2021-yil 4-iyundagi  6199-"
+"son qarori bilan “Toshkent turizm va biznes kolleji”, “Ipak yo‘li” turizm va "
+"madaniy meros xalqaro universiteti huzuriga o‘tkazilgan. \n"
+"“Toshkent turizm va biznes kolleji” o‘z ta’lim faoliyati davomida xalq "
+"xo‘jaligining turli tarmoqlari uchun “Turizm”, Mehmonxona xo‘jaligi”, "
+"“Sartaroshlik san’ati”, “Buxgalteriya” va “Umumiy ovqatlanish” "
+"mutaxassisliklari bo‘yicha kadrlar tayyorlab kelmoqda.\n"
+"     Toshkent turizm va madaniy meros texnikumi o‘zining  45-yillik "
+"faoliyati  davomida turli mutaxassisliklar bo‘yicha 4228 – nafar "
+"bitiruvchiga  hayotga yo‘llanma bergan.   Hozirda  texnikumimiz  "
+"bitiruvchilari O‘zbekiston Respublikasi xalq xo‘jaligining xizmatlar, biznes "
+"va tadbirkorlik kabi sohalarida muvaffaqiyat bilan mehnat qilib "
+"kelishmoqda.\n"
+"     Bizning  texnikumimiz bir nechta xorijiy ta’lim muassasalari bilan "
+"hamkorlik aloqalarini o‘rnatgan jumladan, Boshqirdiston Davlat "
+"Universiteti,  “Boshqirdistonning UGNTU qoshidagi Turizm va servis "
+"instituti”, “Astana xalqaro iqtisodiyot va moliya instituti”, Xitoyning  "
+"“Jiangxi Fenglin College of Foreign Economy& Trade” kolleji, “Sankt "
+"Peterburg Turizm va mehmonxona servisi kolleji”,  8-sonli kasb -hunar "
+"kolleji (Qozog’iston), 13-sonli kasb-hunar kolleji (Qozog’iston)."
+msgstr ""
