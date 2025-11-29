@@ -41,8 +41,8 @@
                         
                         <div class="singel-blog mt-30">
                             {% if object.image %}
-                                <div class="blog-thum">
-                                    <img src="{{ object.image.url }}">
+                                <div style="display: flex; justify-content: center;" class="blog-thum">
+                                    <img style="width:auto; height: 400px;" src="{{ object.image.url }}">
                                 </div>
                             {% endif %}
                             <div class="blog-cont">
@@ -74,7 +74,7 @@
                             {% endif %}
 
 
-                            <li class="page-item"><a class='active' href="?page={{ page_obj.number }}">{{ page_obj.number }}</a></li>
+                            <li class="page-item"><a class='active' style="background-color: #0000FE;" href="?page={{ page_obj.number }}">{{ page_obj.number }}</a></li>
                 
 
                             {% if page_obj.has_next %}
