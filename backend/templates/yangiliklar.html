@@ -74,7 +74,7 @@
                             {% endif %}
 
 
-                            <li class="page-item"><a class='active' style="background-color: #0000FE;" href="?page={{ page_obj.number }}">{{ page_obj.number }}</a></li>
+                            <li class="page-item"><a class='active' style="background-color: #0000FE;" hover href="?page={{ page_obj.number }}">{{ page_obj.number }}</a></li>
                 
 
                             {% if page_obj.has_next %}
@@ -84,6 +84,13 @@
                                     <i class="fa fa-angle-right"></i>
                                 </a>
                             </li>
+
+                            <style>
+                                .page-item a:hover{
+                                    background-color: #1878BE;
+                                    border-color: #1878BE;
+                                }
+                            </style>
                             {% endif %}
 
 
