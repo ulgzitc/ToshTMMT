@@ -32,8 +32,8 @@ class Yangiliklar(BasePost):
         verbose_name_plural = 'Yangiliklar'
 
 class Yunalishlar(models.Model):
-    title = models.CharField(max_length=200, null=False, blank=False)
-    qisqa_nom = models.CharField(max_length=15, null=True, blank=True)
+    title = models.CharField(max_length=20, null=False, blank=False)
+    description = models.TextField(max_length=100, null=True, blank=True)
     icon = models.ImageField(upload_to='yunalishlar/icons/', blank=True, null=True)
     image = models.ImageField(upload_to='yunalishlar/', blank=True, null=True)
 
@@ -41,4 +41,6 @@ class Yunalishlar(models.Model):
         return self.title
 
     class Meta:
-        verbose_name_plural = "Yunalishlar"    
+        verbose_name_plural = "Yunalishlar"   
+
+
