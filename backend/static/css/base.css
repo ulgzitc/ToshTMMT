@@ -76,6 +76,19 @@ footer .cont{
     height: 250px;
 }
 
+.header-row {
+    flex-wrap: nowrap;
+}
+
+@media (max-width:995px) {
+    .header-row{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
 @media (max-width: 770px) {
     .hamkor-temp{
         width: 100%;
@@ -83,8 +96,4 @@ footer .cont{
     .h-row{
         flex-direction: column;
     }
-}
-
-.header-row {
-    flex-wrap: nowrap;
 }
