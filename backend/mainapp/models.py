@@ -4,9 +4,9 @@ from django.utils.translation import gettext_lazy as _
 
 class BasePost(models.Model):
     title = models.CharField(_('Title'), max_length=200)
-    description = models.TextField(_('Description'), blank=True, null=True)
+    description = models.TextField(_('Description'), blank=False, null=False)
     date = models.DateTimeField(auto_now_add=True)
-    image = models.ImageField(upload_to='uploads/', blank=True, null=True)
+    image = models.ImageField(upload_to='uploads/', blank=False, null=False)
     slug = models.SlugField(unique=True, blank=True)
 
     class Meta:
@@ -34,9 +34,8 @@ class Yangiliklar(BasePost):
 
 class Yunalishlar(models.Model):
     title = models.CharField(_('Title'), max_length=20, null=False, blank=False)
-    description = models.TextField(_('Description'), max_length=100, null=True, blank=True)
-    icon = models.ImageField(upload_to='yunalishlar/icons/', blank=True, null=True)
-    image = models.ImageField(upload_to='yunalishlar/', blank=True, null=True)
+    description = models.TextField(_('Description'), max_length=100, null=False, blank=False)
+    image = models.ImageField(upload_to='yunalishlar/', blank=False, null=False)
 
     def __str__(self):
         return self.title
