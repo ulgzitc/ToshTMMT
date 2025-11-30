@@ -36,36 +36,53 @@
               <div class="col-lg-8">
                   <div class="blog-details mt-30">
 
-
+                            
 {% if object.gallery.all %}
- <!-- Slideshow container -->
-<div class="slideshow-container">
+
+<div class="slideshow-container" style="max-width:1000px; position:relative; margin:auto;">
 
 {% for image in object.gallery.all %}
-  <!-- Full-width images with number and caption text -->
-  <div class="mySlides fade">
-    <div class="numbertext">{{ forloop.counter }} / {{ object.gallery.all|length }}</div>
-    <img src="{{ image.image.url }}" style="width:100%">
-    <div class="text">{{ image.caption|default:object.title }}</div>
+  <div class="mySlides" style="display:none;">
+
+    <img src="{{ image.image.url }}" style="width:100%; vertical-align:middle;">
+
+    <div class="text"
+         style="color:#f2f2f2; font-size:16px; padding:10px 12px; position:absolute; bottom:0; width:100%; color:white; text-align:center; background:rgba(0,0,0,0.25);">
+      {{ image.caption|default:object.title }}
+    </div>
   </div>
 {% endfor %}
 
-  <!-- Next and previous buttons -->
-  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  <a class="prev"
+     onclick="plusSlides(-1)"
+     style="cursor:pointer; position:absolute; top:50%; left:0; padding:16px; color:white; font-weight:bold; font-size:18px; background:rgba(0,0,0,0.20); border-radius:3px; user-select:none; transform:translateY(-50%);">
+    &#10094;
+  </a>
+
+  <a class="next"
+     onclick="plusSlides(1)"
+     style="cursor:pointer; position:absolute; top:50%; right:0; padding:16px; color:white; font-weight:bold; font-size:18px; background:rgba(0, 0, 0, 0.20); border-radius:3px; user-select:none; transform:translateY(-50%);">
+    &#10095;
+  </a>
+
 </div>
 <br>
 
-<!-- The dots/circles -->
-<div style="text-align:center">
+<div style="text-align:center;">
     {% for _ in object.gallery.all %}
-    <span class="dot" onclick="currentSlide({{ forloop.counter }})"></span>
+    <span class="dot"
+          onclick="currentSlide({{ forloop.counter }})"
+          style="cursor:pointer; height:12px; width:12px; margin:5px; background-color:#bbb; border-radius:50%; display:inline-block;">
+    </span>
     {% endfor %}
 </div> 
+
 {% else %}
-  <div class="mySlides fade">
-    <img src="{{ image.image.url }}" style="width:100%" alt="Featured Image">
-  </div>
+
+<div class="mySlides" style="display:block;">
+  <img src="{{ object.image.url }}" style="width:100%;" alt="Featured Image">
+</div>
+
 {% endif %}
 
 
