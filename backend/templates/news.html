@@ -53,9 +53,11 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="singel-course mt-30">
                             <div class="thum">
+                                {% if object.image %}
                                 <div class="image">
                                     <img src="{{ object.image.url }}" alt="Course">
                                 </div>
+                                {% endif %}
                             </div>
                             <div class="cont">
                                 <a href="{% url 'yangilik' object.slug %}">
@@ -78,9 +80,11 @@
                             <div class="row no-gutters">
                                 <div class="col-md-6">
                                     <div class="thum">
+                                        {% if object.image %}
                                         <div class="image">
                                             <img src="{{ object.image.url }}" alt="Course">
                                         </div>
+                                        {% endif %}
                                     </div>
                                 </div>
                                 <div class="col-md-6">

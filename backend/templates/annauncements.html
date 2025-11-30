@@ -31,9 +31,11 @@
             {% for object in page_obj %}
                <div class="col-lg-6">
                    <div class="singel-event-list mt-30">
+                        {% if object.image %}
                        <div class="event-thum">
                            <img src="{{ object.image.url }}" alt="Event">
                        </div>
+                       {% endif %}
                        <div class="event-cont">
                            <span><i class="fa fa-calendar"></i> {{ object.date }}</span>
                             <a href="{% url 'elon' object.slug %}"><h4>{{ object.title }}</h4></a>
