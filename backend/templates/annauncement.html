@@ -1,0 +1,128 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{{ object.title }}{% endblock %}
+
+{% block content %}
+
+
+
+
+
+    <section id="page-banner" class="pt-105 pb-130 bg_cover" data-overlay="8" style="background-image: url('{% static 'images/page-banner-4.jpg' %}')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="page-banner-cont">
+                        <h2>{{ object.title }}</h2>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="{% url 'homepage' %}">{% trans "Bosh sahifa" %}</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page"><a href="{% url 'elonlar' %}">{% trans "Elonlar" %}</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">{{ object.title }}</li>
+
+                            </ol>
+                        </nav>
+                    </div>  <!-- page banner cont -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+
+    <section id="blog-singel" class="pt-90 pb-120 gray-bg">
+        <div class="container">
+           <div class="row">
+              <div class="col-lg-8">
+                  <div class="blog-details mt-30">
+
+
+{% if object.gallery.all %}
+ <!-- Slideshow container -->
+<div class="slideshow-container">
+
+{% for image in object.gallery.all %}
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext">{{ forloop.counter }} / {{ object.gallery.all|length }}</div>
+    <img src="{{ image.image.url }}" style="width:100%">
+    <div class="text">{{ image.caption|default:object.title }}</div>
+  </div>
+{% endfor %}
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+    {% for _ in object.gallery.all %}
+    <span class="dot" onclick="currentSlide({{ forloop.counter }})"></span>
+    {% endfor %}
+</div> 
+{% else %}
+  <div class="mySlides fade">
+    <img src="{{ image.image.url }}" style="width:100%" alt="Featured Image">
+  </div>
+{% endif %}
+
+
+                      <div class="cont">
+                          <h3>{{ object.title }}</h3>
+                          <ul>
+                               <li><a href="#"><i class="fa fa-calendar"></i>{{ object.date }}</a></li>
+
+                           </ul>
+                           <p>{{ object.description }}</p>
+
+
+                           <ul class="share">
+                               <li class="title">{% trans "Ulashish :" %}</li>
+                               <li><a href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}" target="_blank"><i class="fa fa-facebook-f"></i></a></li>
+                               <li><a href="https://twitter.com/intent/tweet?url={{ request.build_absolute_uri }}" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                               <li><a href="https://t.me/share/url?url={{ request.build_absolute_uri }}" target="_blank"><i class="fa fa-telegram"></i></a></li>
+                               <li><a href="https://wa.me/?text={{ request.build_absolute_uri }}" target="_blank"><i class="fa fa-whatsapp"></i></a></li>
+                               <li><a href="https://www.linkedin.com/sharing/share-offsite/?url={{ request.build_absolute_uri }}" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                           </ul>
+
+
+                           
+                      </div> <!-- cont -->
+                  </div> <!-- blog details -->
+              </div>
+               <div class="col-lg-4">
+                   <div class="saidbar">
+
+
+                       <div class="row">
+                           <div class="col-lg-12 col-md-6">
+                               <div class="saidbar-post mt-30">
+                                   <h4>{% trans "Bizni Telegramda kuzatib boring :" %}</h4>
+                                   <ul>
+                                       <li>
+                                            <a href="#">
+                                                <div class="singel-post">
+                                                    <ul class="share">
+                                                           <li><a href="https://t.me/TTMMT2025" target="_blank"><i class="fa fa-telegram"></i></a></li>
+                                                           <li><h6><a href="https://t.me/TTMMT2025" target="_blank">@TTMMT2025</a></h6></li>
+                                                    </ul>
+                                               </div> <!-- singel post -->
+                                            </a>
+                                       </li>
+
+                                   </ul>
+                               </div> <!-- saidbar post -->
+                           </div>
+                       </div> <!-- row -->
+
+
+
+                   </div> <!-- saidbar -->
+               </div>
+           </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+
+{% endblock %}

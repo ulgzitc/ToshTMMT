@@ -45,3 +45,35 @@ class Yunalishlar(models.Model):
         verbose_name_plural = _("Yunalishlar")   
 
 
+
+
+
+
+class GalleryImage(models.Model):
+
+    
+    elonlar = models.ForeignKey(
+        'Elonlar', 
+        on_delete=models.CASCADE, 
+        null=True, 
+        blank=True,
+        related_name='gallery'
+    )
+    
+    yangiliklar = models.ForeignKey(
+        'Yangiliklar', 
+        on_delete=models.CASCADE, 
+        null=True, 
+        blank=True,
+        related_name='gallery'
+    )
+    
+    image = models.ImageField(upload_to='galleries/')
+    caption = models.CharField(max_length=255, blank=True)
+    
+    class Meta:
+        verbose_name = "Gallery Image"
+        verbose_name_plural = "Gallery Images"
+        
+    def __str__(self):
+        return f"Image for post ID {self.elonlar.id if self.elonlar else self.yangiliklar.id}"

@@ -23,27 +23,27 @@ class HomepageView(TemplateView):
 ############ Elon
 class ElonlarView(ListView):
     model = Elonlar
-    template_name = 'yangiliklar.html'
+    template_name = 'annauncements.html'
     context_object_name = 'objects'
-    paginate_by = 2
+    paginate_by = 6
     ordering = ['-date']
 
 class ElonView(DetailView):
     model = Elonlar
-    template_name = 'yangilik.html'
+    template_name = 'annauncement.html'
     context_object_name = 'object'
 
 ############ Yanglik
 class YangiliklarView(ListView):
     model = Yangiliklar
-    template_name = 'yangiliklar.html'
+    template_name = 'news.html'
     context_object_name = 'objects'
-    paginate_by = 2
+    paginate_by = 6
     ordering = ['-date']
 
 class YangilikView(DetailView):
     model = Yangiliklar
-    template_name = 'yangilik.html'
+    template_name = 'new.html'
     context_object_name = 'object'
 
 
