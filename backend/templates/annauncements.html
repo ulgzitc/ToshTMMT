@@ -39,7 +39,7 @@
                        <div class="event-cont">
                            <span><i class="fa fa-calendar"></i> {{ object.date }}</span>
                             <a href="{% url 'elon' object.slug %}"><h4>{{ object.title }}</h4></a>
-                            <p>{{ object.description }}</p>
+                            <p>{{ object.description|truncatechars:75 }}</p>
                        </div>
                    </div>
                </div>

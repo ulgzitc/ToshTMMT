@@ -253,7 +253,7 @@
                                 <li><a href="{% url 'yangilik' yangiliklar.0.slug %}"><i class="fa fa-calendar"></i>{{ yangiliklar.0.date }} </a></li>
                             </ul>
                             <a href="{% url 'yangilik' yangiliklar.0.slug %}"><h3>{{ yangiliklar.0.title }}</h3></a>
-                            <p>{{ yangiliklar.0.description }}</p>
+                            <p>{{ yangiliklar.0.description|truncatechars:250 }}</p>
                         </div>
                     </div> <!-- singel news -->
                 </div>
@@ -272,7 +272,7 @@
                                         <li><a href="{% url 'yangilik' yangiliklar.1.slug %}"><i class="fa fa-calendar"></i>{{ yangiliklar.1.date }} </a></li>
                                     </ul>
                                     <a href="{% url 'yangilik' yangiliklar.1.slug %}"><h3>{{ yangiliklar.1.title }}</h3></a>
-                                    <p>{{ yangiliklar.1.description }}</p>
+                                    <p>{{ yangiliklar.1.description|truncatechars:90 }}</p>
                                 </div>
                             </div>
                         </div> <!-- row -->
@@ -292,7 +292,7 @@
                                         <li><a href="{% url 'yangilik' yangiliklar.2.slug %}"><i class="fa fa-calendar"></i>{{ yangiliklar.2.date }} </a></li>
                                     </ul>
                                     <a href="{% url 'yangilik' yangiliklar.2.slug %}"><h3>{{ yangiliklar.2.title }}</h3></a>
-                                    <p>{{ yangiliklar.2.description }}</p>
+                                    <p>{{ yangiliklar.2.description|truncatechars:90 }}</p>
                                 </div>
                             </div>
                         </div> <!-- row -->
@@ -312,7 +312,7 @@
                                         <li><a href="{% url 'yangilik' yangiliklar.3.slug %}"><i class="fa fa-calendar"></i>{{ yangiliklar.3.date }} </a></li>
                                     </ul>
                                     <a href="{% url 'yangilik' yangiliklar.3.slug %}"><h3>{{ yangiliklar.3.title }}</h3></a>
-                                    <p>{{ yangiliklar.3.description }}</p>
+                                    <p>{{ yangiliklar.3.description|truncatechars:90 }}</p>
                                 </div>
                             </div>
                         </div> <!-- row -->

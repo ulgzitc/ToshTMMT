@@ -1611,6 +1611,12 @@ p {
 .singel-news .news-thum img{
     width: 100%;
     border-radius: 5px;
+
+    height: 100px;
+    overflow: hidden;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
 }
 .singel-news .news-cont{}
 .singel-news .news-cont ul li{
