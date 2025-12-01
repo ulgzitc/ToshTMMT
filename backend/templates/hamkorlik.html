@@ -2,13 +2,13 @@
 {% load static %}
 {% load i18n %}
 
+<link rel="stylesheet" href="{% static 'css/hamkorlik.css' %}">
+
 {% block title %}{% trans "Hamkorlik" %}{% endblock %}
 
 {% block content %}
 
-   
-    <!--====== PAGE BANNER PART START ======-->
-    
+       
     <section id="page-banner" class="pt-105 pb-110 bg_cover" data-overlay="8" style="background-image: url('{% static 'images/page-banner-7.jpg' %}')">
         <div class="container">
             <div class="row">
@@ -33,204 +33,165 @@
               <div class="col-lg-8">
                   <div class="blog-details mt-30">
                       <div class="thum">
-                          <img src="images/blog/b-1.jpg" alt="Blog Details">
+                          <img src="{% static "images/partnar/imagy.png" %}" style="margin-left: 50px;" alt="Hamkorlar">
                       </div>
                       <div class="cont">
-                          <h3>Few tips for get better results in examination</h3>
-                          <ul>
-                               <li><a href="#"><i class="fa fa-calendar"></i>25 Dec 2018</a></li>
-                               <li><a href="#"><i class="fa fa-user"></i>Mark anthem</a></li>
-                               <li><a href="#"><i class="fa fa-tags"></i>Education</a></li>
-                           </ul>
-                           <p>Lorem ipsum gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus .
-                           <br>
-                           <br>
-                           gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus .
-                           <br>
-                           <br>
-                           gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus .
-                           </p>
-                           <ul class="share">
-                               <li class="title">Share :</li>
-                               <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                               <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                               <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                               <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                               <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                           </ul>
-                           <div class="blog-comment pt-45">
-                               <div class="title pb-15">
-                                   <h3>Comment (3)</h3>
-                               </div>  <!-- title -->
-                               <ul>
-                                   <li>
-                                       <div class="comment">
-                                           <div class="comment-author">
-                                                <div class="author-thum">
-                                                    <img src="images/review/r-1.jpg" alt="Reviews">
-                                                </div>
-                                                <div class="comment-name">
-                                                    <h6>Bobby Aktar</h6>
-                                                    <span>April 03, 2019</span>
-                                                </div>
-                                            </div>
-                                            <div class="comment-description pt-20">
-                                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which.</p>
-                                            </div>
-                                            <div class="comment-replay">
-                                                <a href="#">Reply</a>
-                                            </div>
-                                        </div> <!-- comment -->
-                                        <ul class="replay">
-                                           <li>
-                                               <div class="comment">
-                                                   <div class="comment-author">
-                                                        <div class="author-thum">
-                                                            <img src="images/review/r-2.jpg" alt="Reviews">
-                                                        </div>
-                                                        <div class="comment-name">
-                                                            <h6>Humayun Ahmed</h6>
-                                                            <span>April 03, 2019</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="comment-description pt-20">
-                                                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
-                                                    </div>
-                                                    <div class="comment-replay">
-                                                        <a href="#">Reply</a>
-                                                    </div>
-                                                </div> <!-- comment -->
-                                           </li>
-                                       </ul>
-                                   </li>
-                                   <li>
-                                       <div class="comment">
-                                           <div class="comment-author">
-                                                <div class="author-thum">
-                                                    <img src="images/review/r-3.jpg" alt="Reviews">
-                                                </div>
-                                                <div class="comment-name">
-                                                    <h6>Bobby Aktar</h6>
-                                                    <span>April 03, 2019</span>
-                                                </div>
-                                            </div>
-                                            <div class="comment-description pt-20">
-                                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which.</p>
-                                            </div>
-                                            <div class="comment-replay">
-                                                <a href="#">Reply</a>
-                                            </div>
-                                        </div> <!-- comment -->
-                                   </li>
-                               </ul>
-                               <div class="title pt-45 pb-25">
-                                   <h3>Leave a comment</h3>
-                               </div> <!-- title -->
-                               <div class="comment-form">
-                                   <form action="#">
-                                       <div class="row">
-                                           <div class="col-md-6">
-                                               <div class="form-singel">
-                                                   <input type="text" placeholder="Name">
-                                               </div> <!-- form singel -->
-                                           </div>
-                                           <div class="col-md-6">
-                                               <div class="form-singel">
-                                                   <input type="email" placeholder="email">
-                                               </div> <!-- form singel -->
-                                           </div>
-                                           <div class="col-md-12">
-                                               <div class="form-singel">
-                                                   <textarea placeholder="Comment"></textarea>
-                                               </div> <!-- form singel -->
-                                           </div>
-                                           <div class="col-md-12">
-                                               <div class="form-singel">
-                                                   <button class="main-btn">Submit</button>
-                                               </div> <!-- form singel -->
-                                           </div>
-                                       </div> <!-- row -->
-                                   </form>
-                               </div>  <!-- comment-form -->
-                           </div> <!-- blog comment -->
+                          
+                           
+<section class="hamkorlik-section">
+  <div class="hamkorlik-container">
+
+    <h2 class="hamkorlik-title">
+      Hamkorlik va xalqaro aloqalar
+    </h2>
+
+    <p class="hamkorlik-intro">
+      Toshkent turizm va madaniy meros texnikumi mahalliy va xalqaro
+      hamkorlikka katta ahamiyat beradi. Hamkorlikning asosiy maqsadi —
+      ta’lim sifatini oshirish, talabalar uchun amaliyot va ish imkoniyatlarini
+      kengaytirish, qo‘shma dasturlar va loyihalarni ishlab chiqish hamda
+      xalqaro tajribani o‘quv jarayoniga joriy etishdan iborat.
+    </p>
+
+    <div id="talim-hamkorlar" class="hamkorlik-block">
+      <h3 class="anchor-target">Xalqaro ta’lim hamkorlari</h3>
+      <ul>
+        <li>“Ipak yo‘li” Xalqaro Turizm Universiteti (Samarqand)</li>
+        <li>Sankt-Peterburg sayyohlik va mehmonxona servisi kolleji (Rossiya)</li>
+        <li>Jiangxi Fenglin College of Foreign Economy & Trade (Xitoy)</li>
+        <li>Astraxan moliya-iqtisodiyot instituti (Rossiya)</li>
+        <li>TISBI kolleji (Tatariston, Rossiya)</li>
+        <li>Neft texnika universiteti qoshidagi Turizm va servis instituti (Boshqirdiston)</li>
+      </ul>
+    </div>
+
+    <div id="mahalliy-muassasalar" class="hamkorlik-block">
+      <h3 class="anchor-target">Mahalliy oliy ta’lim muassasalari bilan hamkorlik</h3>
+      <ul>
+        <li>Toshkent davlat iqtisodiyot universiteti</li>
+        <li>“Alfraganus” universiteti</li>
+        <li>“Ipak yo‘li” Xalqaro Turizm Universiteti</li>
+      </ul>
+    </div>
+
+    <div id="qoshma-dastur" class="hamkorlik-block">
+      <h3 class="anchor-target">2+2 qo‘shma dasturi imkoniyati</h3>
+      <p>
+        Texnikum bitiruvchilari suhbat asosida hamkor oliy ta’lim muassasalarida
+        o‘qishni 2-kursdan davom ettirish imkoniyatiga ega. Bu tizim talabalarga
+        vaqtni tejash, xalqaro ta’lim muhitiga moslashish va kasbiy rivojlanishni
+        tezlashtirish imkonini beradi.
+      </p>
+    </div>
+
+    <div id="amaliy-hamkorlar"class="hamkorlik-block">
+      <h3 class="anchor-target">Amaliy hamkorlar va ishlab chiqarish bazalari</h3>
+      <p>
+        Texnikum Toshkent shahridagi mehmonxonalar, restoranlar, turizm firmalari
+        va servis markazlari bilan faol hamkorlik qilib keladi. Talabalar ushbu
+        korxonalarda amaliyot o‘tash, real ish tajribasiga ega bo‘lish va kelajakda
+        ish bilan ta’minlanish imkoniyatiga ega.
+      </p>
+    </div>
+
+    <div id="asosiy-maqsadlar" class="hamkorlik-block">
+      <h3 class="anchor-target">Hamkorlikning asosiy maqsadlari</h3>
+      <ul>
+        <li>Akademik almashinuv (o‘qituvchi va talabalar uchun)</li>
+        <li>Qo‘shma innovatsion va ilmiy loyihalarni ishlab chiqish</li>
+        <li>Masofaviy (onlayn) ta’lim dasturlarini yo‘lga qo‘yish</li>
+        <li>Xalqaro standartlarga mos o‘quv dasturlarini yaratish</li>
+        <li>Ikkinchi mutaxassislik olish imkoniyatlarini kengaytirish</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+
+
+        
+                           
                       </div> <!-- cont -->
-                  </div> <!-- blog details -->
+                  </div>
               </div>
                <div class="col-lg-4">
                    <div class="saidbar">
                        <div class="row">
+
                            <div class="col-lg-12 col-md-6">
-                               <div class="saidbar-search mt-30">
-                                   <form action="#">
-                                       <input type="text" placeholder="Search">
-                                       <button type="button"><i class="fa fa-search"></i></button>
-                                   </form>
-                               </div> <!-- saidbar search -->
                                <div class="categories mt-30">
-                                   <h4>Categories</h4>
+                                   <h4>Qisqa linklar</h4>
                                    <ul>
-                                       <li><a href="#">Fronted</a></li>
-                                       <li><a href="#">Backend</a></li>
-                                       <li><a href="#">Photography</a></li>
-                                       <li><a href="#">Teachnology</a></li>
-                                       <li><a href="#">GMET</a></li>
-                                       <li><a href="#">Language</a></li>
-                                       <li><a href="#">Science</a></li>
-                                       <li><a href="#">Accounting</a></li>
-                                   </ul>
+                                       <li><a href="#talim-hamkorlar">Xalqaro ta’lim hamkorlari</a></li>
+                                       <li><a href="#mahalliy-muassasalar">Mahalliy oliy ta’lim muassasalari bilan hamkorlik</a></li>
+                                       <li><a href="#qoshma-dastur">2+2 qo‘shma dasturi imkoniyati</a></li>
+                                       <li><a href="#amaliy-hamkorlar">Amaliy hamkorlar va ishlab chiqarish bazalari</a></li>
+                                       <li><a href="#asosiy-maqsadlar">Hamkorlikning asosiy maqsadlari</a></li>
+                                    </ul>
+                                    <br>
+                                    <h4>Biz bilan bog'laning :</h4>
+                                    <ul>
+                                        <li>+998-71-257-77-77</li>
+                                        <li>+998-99-880-59-32</li>
+                                        <li><a href="https://t.me/TTMMT2025">Telegram: @TTMMT2025</a></li>
+                                    </ul>
                                </div>
                            </div> <!-- categories -->
-                           <div class="col-lg-12 col-md-6">
-                               <div class="saidbar-post mt-30">
-                                   <h4>Popular Posts</h4>
-                                   <ul>
-                                       <li>
-                                            <a href="#">
-                                                <div class="singel-post">
-                                                   <div class="thum">
-                                                       <img src="images/blog/blog-post/bp-1.jpg" alt="Blog">
-                                                   </div>
-                                                   <div class="cont">
-                                                       <h6>Introduction to languages</h6>
-                                                       <span>20 Dec 2018</span>
-                                                   </div>
-                                               </div> <!-- singel post -->
-                                            </a>
-                                       </li>
-                                       <li>
-                                            <a href="#">
-                                                <div class="singel-post">
-                                                   <div class="thum">
-                                                       <img src="images/blog/blog-post/bp-2.jpg" alt="Blog">
-                                                   </div>
-                                                   <div class="cont">
-                                                       <h6>How to build a game with java</h6>
-                                                       <span>10 Dec 2018</span>
-                                                   </div>
-                                               </div> <!-- singel post -->
-                                            </a>
-                                       </li>
-                                       <li>
-                                            <a href="#">
-                                                <div class="singel-post">
-                                                   <div class="thum">
-                                                       <img src="images/blog/blog-post/bp-1.jpg" alt="Blog">
-                                                   </div>
-                                                   <div class="cont">
-                                                       <h6>Basic accounting from primary</h6>
-                                                       <span>07 Dec 2018</span>
-                                                   </div>
-                                               </div> <!-- singel post -->
-                                            </a>
-                                       </li>
-                                   </ul>
-                               </div> <!-- saidbar post -->
-                           </div>
+
+                           
                        </div> <!-- row -->
                    </div> <!-- saidbar -->
                </div>
            </div> <!-- row -->
         </div> <!-- container -->
     </section>
+
+    <div id="patnar-logo" class="pt-80 pb-80">
+        <div class="container">
+            <h3 class="mb-40" style="text-align: center;">HAMKORLARIMIZ:</h3>
+            <div class="row patnar-slied">
+                <div class="col-lg-12">
+                    <div class="singel-patnar text-center mt-20 mb-20 ml-40 mr-40">
+                        <img src="{% static 'images/partnar/alfra.png' %}" alt="Logo">
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="singel-patnar text-center mt-20 mb-20 ml-40 mr-40" style="height: ;">
+                        <img src="{% static 'images/partnar/china.png' %}" alt="Logo">
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="singel-patnar text-center mt-20 mb-20 ml-40 mr-40">
+                        <img src="{% static 'images/partnar/imzf.png' %}" alt="Logo">
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="singel-patnar text-center mt-20 mb-20 ml-40 mr-40">
+                        <img src="{% static 'images/partnar/ipakyuli.png' %}" alt="Logo">
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="singel-patnar text-center mt-20 mb-20 ml-40 mr-40">
+                        <img src="{% static 'images/partnar/tdiu.png' %}" alt="Logo">
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="singel-patnar text-center mt-20 mb-20 ml-20 mr-20">
+                        <img src="{% static 'images/partnar/tika.png' %}" alt="Logo">
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="singel-patnar text-center mt-20 mb-20 ml-40 mr-40">
+                        <img src="{% static 'images/partnar/tisbi.png' %}" alt="Logo">
+                    </div>
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </div> 
+
+
+<script src="{% static 'js/anchor.js' %}"></script>
+
 
 {% endblock %}
