@@ -3861,3 +3861,116 @@ p.form-message.error {
 
 
 
+/* =========================================
+   CUSTOM FIXES FOR CLEAN IMAGE FRAMING
+   ========================================= */
+
+/* --- 1. Yangiliklar (News) - Grid Style like "Learn JS" --- */
+
+/* Fix the Grid View (The Card Look) */
+#courses-grid .singel-course .thum .image {
+    width: 100%;
+    height: 240px; /* Sets a fixed frame height */
+    overflow: hidden; 
+    border-radius: 5px 5px 0 0; /* Smooth corners on top */
+}
+
+/* Fix the List View (The Horizontal Tab) */
+#courses-list .singel-course .thum .image {
+    width: 100%;
+    height: 300px; 
+    overflow: hidden;
+    border-radius: 5px 0 0 5px; 
+}
+
+/* The Magic Rule: This makes images fill the frame without stretching */
+#courses-grid .singel-course .thum .image img,
+#courses-list .singel-course .thum .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    transition: transform 0.4s ease;
+}
+
+/* Add the zoom effect back in cleanly */
+#courses-grid .singel-course:hover .thum .image img,
+#courses-list .singel-course:hover .thum .image img {
+    transform: scale(1.05); 
+}
+
+/* --- 2. Elonlar (Announcements) - List Style like "Tech Summit" --- */
+
+.singel-event-list {
+    display: flex;
+    align-items: flex-start; /* Aligns text to top */
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05); /* Soft shadow */
+}
+
+.singel-event-list .event-thum {
+    flex: 0 0 200px; /* Forces the image container to stay exactly 200px wide */
+    height: 150px;   /* Forces fixed height */
+    width: 200px;
+    margin-right: 25px; /* Spacing between image and text */
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.singel-event-list .event-thum img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Crops image perfectly to fit the 200x150 box */
+}
+
+/* --- 3. Yo'nalishlar (Study Branches) - Book List Style --- */
+
+.singel-publication {
+    overflow: hidden; /* Contains elements */
+}
+
+/* Force the image container to a vertical rectangle aspect ratio */
+.singel-publication .image {
+    height: 350px; 
+    width: 100%;
+    overflow: hidden;
+    border-radius: 5px;
+    background-color: #f4f4f4; /* Placeholder color if image loads slow */
+}
+
+.singel-publication .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures book covers fill the area */
+}
+
+/* Align text vertically in the center */
+.singel-publication .row {
+    align-items: center;
+}
+
+/* Ensure the logo image doesn't get huge */
+.logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Fix vertical alignment in the white header bar */
+.header-logo-support .row {
+    display: flex;
+    align-items: center; /* This vertically centers Logo, Title, and Phone number */
+}
+
+/* Ensure the title text is responsive */
+.hdr-title {
+    margin: 0;
+    font-weight: 700;
+    color: #1d2025;
+}
+
+@media (max-width: 768px) {
+    .hdr-title {
+        font-size: 18px !important; /* Smaller font on mobile */
+    }
+}

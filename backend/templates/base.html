@@ -71,16 +71,12 @@
        
         <div class="header-top d-none d-lg-block">
             <div class="container">
-
-
-
-
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="header-contact text-lg-left text-center">
                             <ul>
-                                <li><img class="header-icon" src="{% static "images/all-icon/map.svg" %}" alt="icon"><span>{% blocktrans %}Do'stlik 2-mavzesi, 4-uy, Toshkent{% endblocktrans %}</span></li>
-                                <li><img class="header-icon" src="{% static "images/all-icon/email.svg" %}" alt="icon"><span>t.me/TTMMT2025</span></li>
+                                <li><img class="header-icon" src="{% static 'images/all-icon/map.svg' %}" alt="icon"><span>{% blocktrans %}Do'stlik 2-mavzesi, 4-uy, Toshkent{% endblocktrans %}</span></li>
+                                <li><img class="header-icon" src="{% static 'images/all-icon/email.svg' %}" alt="icon"><span>t.me/TTMMT2025</span></li>
                             </ul>
                         </div>
                     </div>
@@ -89,31 +85,28 @@
                             <p>{% blocktrans %}Murojaatlar vaqti: 9:00 - 17:00 (Dushanba - Juma){% endblocktrans %}</p>
                         </div>
                     </div>
-                    
-
-
-                </div> <!-- row -->
-            </div> <!-- container -->
-        </div> <!-- header top -->
-
-        <div class="header-logo-support pt-10 pb-10">
+                </div> </div> </div> <div class="header-logo-support pt-10 pb-10">
             <div class="container">
-                <div class="row header-row" style="flex-wrap: nowrap;">
-                    <div class="col-lg-4 col-md-4 hdr-logo" style="max-width: fit-content;">
+                <div class="row align-items-center"> 
+                    <div class="col-lg-2 col-md-3 col-4">
                         <div class="logo">
                             <a href="{% url 'homepage' %}">
-                                <img src="{% static 'images/logo.png' %}" alt="Logo">
+                                <img src="{% static 'images/logo.png' %}" alt="Logo" style="max-height: 80px; width: auto;">
                             </a>
                         </div>
                     </div>
-                    <div class="ml-20">
-                        <h2 class="hdr-title">{% trans "Toshkent Turizm va Madaniy Meros texnikumi" %}</h2>
+                    
+                    <div class="col-lg-7 col-md-5 col-8">
+                        <div class="ml-20">
+                            <h2 class="hdr-title" style="font-size: 24px; line-height: 1.2;">{% trans "Toshkent Turizm va Madaniy Meros texnikumi" %}</h2>
+                        </div>
                     </div>
-                    <div class="col-lg-8 col-md-8 mt-25 hdr-contact" style="max-width: fit-content;">
-                        <div class="support-button float-right d-none d-md-block">
+
+                    <div class="col-lg-3 col-md-4 d-none d-md-block">
+                        <div class="support-button float-right">
                             <div class="support float-left">
                                 <div class="icon support-icon">
-                                    <img src="{% static "images/all-icon/support.png" %}" alt="icon">
+                                    <img src="{% static 'images/all-icon/support.png' %}" alt="icon">
                                 </div>
                                 <div class="cont">
                                     <p>{% trans "Biz bilan bog'laning:" %}</p>
@@ -122,15 +115,11 @@
                             </div>
                         </div>
                     </div>
-                </div> <!-- row -->
-            </div> <!-- container -->
-        </div> <!-- header logo support -->
-        
-        <div class="navigation">
-            <div class="container" style="max-width: 1260px; margin-left: auto;">
+                </div> </div> </div> <div class="navigation">
+            <div class="container">
                 <div class="row">
-                    <div class="col-lg-10 col-md-10 col-sm-9 col-8">
-                        <nav class="navbar navbar-expand-lg" style="left: 35px;">
+                    <div class="col-lg-12">
+                        <nav class="navbar navbar-expand-lg">
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
@@ -138,7 +127,7 @@
                             </button>
 
                             <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
-                                <ul class="navbar-nav mr-auto" style="display: -webkit-box;">
+                                <ul class="navbar-nav mr-auto">
                                     <li class="nav-item">
                                         <a {% if request.resolver_match.url_name == "homepage" %}class="active"{% endif %} href="{% url 'homepage' %}">{% trans "Bosh Sahifa" %}</a>
                                     </li>
@@ -162,32 +151,23 @@
                                     </li>
                                 </ul>
 
-                                <form action="{% url 'set_language' %}" method="post" class="top-bar-language-form">
+                                <form action="{% url 'set_language' %}" method="post" class="top-bar-language-form ml-auto">
                                     {% csrf_token %}
-                                
                                     <input name="next" type="hidden" value="{{ request.get_full_path }}">
-                                
-                                        <select name="language" onchange="this.form.submit()" class="lang-selector-dropdown">
-                                            {% get_current_language as CURRENT_LANGUAGE %}
-                                            {% get_available_languages as AVAILABLE_LANGUAGES %}
-                                        
-                                            {% for lang_code, lang_name in AVAILABLE_LANGUAGES %}
-                                                <option value="{{ lang_code }}" {% if lang_code == CURRENT_LANGUAGE %}selected{% endif %}>
-                                                    {{ lang_code|upper }} 
-                                                </option>
-                                            {% endfor %}
-                                        </select>
-                                    </span>
+                                    <select name="language" onchange="this.form.submit()" class="lang-selector-dropdown">
+                                        {% get_current_language as CURRENT_LANGUAGE %}
+                                        {% get_available_languages as AVAILABLE_LANGUAGES %}
+                                        {% for lang_code, lang_name in AVAILABLE_LANGUAGES %}
+                                            <option value="{{ lang_code }}" {% if lang_code == CURRENT_LANGUAGE %}selected{% endif %}>
+                                                {{ lang_code|upper }} 
+                                            </option>
+                                        {% endfor %}
+                                    </select>
                                 </form>
-
                             </div>
-                        </nav> <!-- nav -->
-                    </div>
-                </div> <!-- row -->
-            </div> <!-- container -->
-        </div>
+                        </nav> </div>
+                </div> </div> </div>
     </header>
-
     {% block content %}
     {% endblock %}
 
