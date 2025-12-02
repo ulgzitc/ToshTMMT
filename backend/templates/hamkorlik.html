@@ -17,7 +17,7 @@
                         <h2>{% trans "Hamkorlik" %}</h2>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="./index.html">{% trans "Bosh sahifa" %}</a></li>
+                                <li class="breadcrumb-item"><a href="{% url "homepage" %}">{% trans "Bosh sahifa" %}</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">{% trans "Hamkorlik" %}</li>
                             </ol>
                         </nav>
@@ -42,66 +42,72 @@
   <div class="hamkorlik-container">
 
     <h2 class="hamkorlik-title">
-      Hamkorlik va xalqaro aloqalar
+      {% trans "Hamkorlik va xalqaro aloqalar" %}
     </h2>
 
     <p class="hamkorlik-intro">
+    {% blocktrans %}
       Toshkent turizm va madaniy meros texnikumi mahalliy va xalqaro
       hamkorlikka katta ahamiyat beradi. Hamkorlikning asosiy maqsadi —
       ta’lim sifatini oshirish, talabalar uchun amaliyot va ish imkoniyatlarini
       kengaytirish, qo‘shma dasturlar va loyihalarni ishlab chiqish hamda
       xalqaro tajribani o‘quv jarayoniga joriy etishdan iborat.
+    {% endblocktrans %}
     </p>
 
     <div id="talim-hamkorlar" class="hamkorlik-block">
-      <h3 class="anchor-target">Xalqaro ta’lim hamkorlari</h3>
+      <h3 class="anchor-target">{% trans "Xalqaro ta’lim hamkorlari" %}</h3>
       <ul>
-        <li>“Ipak yo‘li” Xalqaro Turizm Universiteti (Samarqand)</li>
-        <li>Sankt-Peterburg sayyohlik va mehmonxona servisi kolleji (Rossiya)</li>
-        <li>Jiangxi Fenglin College of Foreign Economy & Trade (Xitoy)</li>
-        <li>Astraxan moliya-iqtisodiyot instituti (Rossiya)</li>
-        <li>TISBI kolleji (Tatariston, Rossiya)</li>
-        <li>Neft texnika universiteti qoshidagi Turizm va servis instituti (Boshqirdiston)</li>
+        <li>{% trans "“Ipak yo‘li” Xalqaro Turizm Universiteti (Samarqand)" %}</li>
+        <li>{% trans "Sankt-Peterburg sayyohlik va mehmonxona servisi kolleji (Rossiya)" %}</li>
+        <li>{% trans "Jiangxi Fenglin College of Foreign Economy & Trade (Xitoy)" %}</li>
+        <li>{% trans "Astraxan moliya-iqtisodiyot instituti (Rossiya)" %}</li>
+        <li>{% trans "TISBI kolleji (Tatariston, Rossiya)" %}</li>
+        <li>{% trans "Neft texnika universiteti qoshidagi Turizm va servis instituti (Boshqirdiston)" %}</li>
       </ul>
     </div>
 
     <div id="mahalliy-muassasalar" class="hamkorlik-block">
-      <h3 class="anchor-target">Mahalliy oliy ta’lim muassasalari bilan hamkorlik</h3>
+      <h3 class="anchor-target">{% trans "Mahalliy oliy ta’lim muassasalari bilan hamkorlik" %}</h3>
       <ul>
-        <li>Toshkent davlat iqtisodiyot universiteti</li>
-        <li>“Alfraganus” universiteti</li>
-        <li>“Ipak yo‘li” Xalqaro Turizm Universiteti</li>
+        <li>{% trans "Toshkent davlat iqtisodiyot universiteti" %}</li>
+        <li>{% trans "“Alfraganus” universiteti" %}</li>
+        <li>{% trans "“Ipak yo‘li” Xalqaro Turizm Universiteti" %}</li>
       </ul>
     </div>
 
     <div id="qoshma-dastur" class="hamkorlik-block">
-      <h3 class="anchor-target">2+2 qo‘shma dasturi imkoniyati</h3>
+      <h3 class="anchor-target">{% trans "2+2 qo‘shma dasturi imkoniyati" %}</h3>
       <p>
+        {% blocktrans %}
         Texnikum bitiruvchilari suhbat asosida hamkor oliy ta’lim muassasalarida
         o‘qishni 2-kursdan davom ettirish imkoniyatiga ega. Bu tizim talabalarga
         vaqtni tejash, xalqaro ta’lim muhitiga moslashish va kasbiy rivojlanishni
         tezlashtirish imkonini beradi.
+        {% endblocktrans %}
       </p>
     </div>
 
     <div id="amaliy-hamkorlar"class="hamkorlik-block">
-      <h3 class="anchor-target">Amaliy hamkorlar va ishlab chiqarish bazalari</h3>
+      <h3 class="anchor-target">{% trans "Amaliy hamkorlar va ishlab chiqarish bazalari" %}</h3>
       <p>
+        {% blocktrans %}
         Texnikum Toshkent shahridagi mehmonxonalar, restoranlar, turizm firmalari
         va servis markazlari bilan faol hamkorlik qilib keladi. Talabalar ushbu
         korxonalarda amaliyot o‘tash, real ish tajribasiga ega bo‘lish va kelajakda
         ish bilan ta’minlanish imkoniyatiga ega.
+        {% endblocktrans %}
       </p>
     </div>
 
     <div id="asosiy-maqsadlar" class="hamkorlik-block">
-      <h3 class="anchor-target">Hamkorlikning asosiy maqsadlari</h3>
+      <h3 class="anchor-target">{% trans "Hamkorlikning asosiy maqsadlari" %}</h3>
       <ul>
-        <li>Akademik almashinuv (o‘qituvchi va talabalar uchun)</li>
-        <li>Qo‘shma innovatsion va ilmiy loyihalarni ishlab chiqish</li>
-        <li>Masofaviy (onlayn) ta’lim dasturlarini yo‘lga qo‘yish</li>
-        <li>Xalqaro standartlarga mos o‘quv dasturlarini yaratish</li>
-        <li>Ikkinchi mutaxassislik olish imkoniyatlarini kengaytirish</li>
+        <li>{% trans "Akademik almashinuv (o‘qituvchi va talabalar uchun)" %}</li>
+        <li>{% trans "Qo‘shma innovatsion va ilmiy loyihalarni ishlab chiqish" %}</li>
+        <li>{% trans "Masofaviy (onlayn) ta’lim dasturlarini yo‘lga qo‘yish" %}</li>
+        <li>{% trans "Xalqaro standartlarga mos o‘quv dasturlarini yaratish" %}</li>
+        <li>{% trans "Ikkinchi mutaxassislik olish imkoniyatlarini kengaytirish" %}</li>
       </ul>
     </div>
 
@@ -121,16 +127,16 @@
 
                            <div class="col-lg-12 col-md-6">
                                <div class="categories mt-30">
-                                   <h4>Qisqa linklar</h4>
+                                   <h4>{% trans "Qisqa linklar" %}</h4>
                                    <ul>
-                                       <li><a href="#talim-hamkorlar">Xalqaro ta’lim hamkorlari</a></li>
-                                       <li><a href="#mahalliy-muassasalar">Mahalliy oliy ta’lim muassasalari bilan hamkorlik</a></li>
-                                       <li><a href="#qoshma-dastur">2+2 qo‘shma dasturi imkoniyati</a></li>
-                                       <li><a href="#amaliy-hamkorlar">Amaliy hamkorlar va ishlab chiqarish bazalari</a></li>
-                                       <li><a href="#asosiy-maqsadlar">Hamkorlikning asosiy maqsadlari</a></li>
+                                       <li><a href="#talim-hamkorlar">{% trans "Xalqaro ta’lim hamkorlari" %}</a></li>
+                                       <li><a href="#mahalliy-muassasalar">{% trans "Mahalliy oliy ta’lim muassasalari bilan hamkorlik" %}</a></li>
+                                       <li><a href="#qoshma-dastur">{% trans "2+2 qo‘shma dasturi imkoniyati" %}</a></li>
+                                       <li><a href="#amaliy-hamkorlar">{% trans "Amaliy hamkorlar va ishlab chiqarish bazalari" %}</a></li>
+                                       <li><a href="#asosiy-maqsadlar">{% trans "Hamkorlikning asosiy maqsadlari" %}</a></li>
                                     </ul>
                                     <br>
-                                    <h4>Biz bilan bog'laning :</h4>
+                                    <h4>{% trans "Biz bilan bog'laning :" %}</h4>
                                     <ul>
                                         <li>+998-71-257-77-77</li>
                                         <li>+998-99-880-59-32</li>
@@ -149,7 +155,7 @@
 
     <div id="patnar-logo" class="pt-80 pb-80">
         <div class="container">
-            <h3 class="mb-40" style="text-align: center;">HAMKORLARIMIZ:</h3>
+            <h3 class="mb-40" style="text-align: center;">{% trans "HAMKORLARIMIZ:" %}</h3>
             <div class="row patnar-slied">
                 <div class="col-lg-12">
                     <div class="singel-patnar text-center mt-20 mb-20 ml-40 mr-40">

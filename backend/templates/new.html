@@ -26,7 +26,6 @@
             </div> <!-- row -->
         </div> <!-- container -->
     </section>
-
     
     <section id="event-singel" class="pt-120 pb-120 gray-bg">
         <div class="container">
@@ -35,7 +34,7 @@
                     <div class="col-lg-8">
                         <div class="events-left">
                             <h3>{{ object.title }}</h3>
-                            <a href="#"><span><i class="fa fa-calendar"></i> {{ object.date }}</span></a>
+                            <span><i class="fa fa-calendar"></i> {{ object.date }}</span>
 
                             
 {% if object.gallery.all %}
@@ -87,9 +86,6 @@
 {% endif %}
 
 
-
-
-
                             <p>{{ object.description }}</p>
 
 
@@ -109,7 +105,7 @@
                                                 <li><a href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}" target="_blank"><i class="fa fa-facebook-f"><h6>Facebook</h6></i></a></li>
                                                 <li><a href="https://twitter.com/intent/tweet?url={{ request.build_absolute_uri }}" target="_blank"><i class="fa fa-twitter"><h6>Twitter</h6></i></a></li>
                                                 <li><a href="https://t.me/share/url?url={{ request.build_absolute_uri }}" target="_blank"><i class="fa fa-telegram"><h6>Telegram</h6></i></a></li>
-                                                <li><a href="https://wa.me/?text={{ request.build_absolute_uri }}" target="_blank"><i class="fa fa-whatsapp"><h6>WhatsUpp</h6></i></a></li>
+                                                <li><a href="https://wa.me/?text={{ request.build_absolute_uri }}" target="_blank"><i class="fa fa-whatsapp"><h6>WhatsApp</h6></i></a></li>
                                                 <li><a href="https://www.linkedin.com/sharing/share-offsite/?url={{ request.build_absolute_uri }}" target="_blank"><i class="fa fa-linkedin"><h6>LinkedIn</h6></i></a></li>
                                             </ul>
                                         </div> <!-- singel address -->

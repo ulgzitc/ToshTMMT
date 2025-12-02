@@ -80,13 +80,13 @@
                         <div class="header-contact text-lg-left text-center">
                             <ul>
                                 <li><img class="header-icon" src="{% static "images/all-icon/map.svg" %}" alt="icon"><span>{% blocktrans %}Do'stlik 2-mavzesi, 4-uy, Toshkent{% endblocktrans %}</span></li>
-                                <li><img class="header-icon" src="{% static "images/all-icon/email.svg" %}" alt="icon"><span>info@yourmail.com</span></li>
+                                <li><img class="header-icon" src="{% static "images/all-icon/email.svg" %}" alt="icon"><span>t.me/TTMMT2025</span></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="header-opening-time text-lg-right text-center">
-                            <p>{% blocktrans %}Murojaatlar vaqti: 9:00 - 17:00 (Dushanba - Shanba){% endblocktrans %}</p>
+                            <p>{% blocktrans %}Murojaatlar vaqti: 9:00 - 17:00 (Dushanba - Juma){% endblocktrans %}</p>
                         </div>
                     </div>
                     
@@ -204,7 +204,7 @@
                             <ul class="mt-20">
                                 <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-telegram"></i></a></li>
+                                <li><a href="https://t.me/TTMMT2025"><i class="fa fa-telegram"></i></a></li>
                                 <li><a href="#"><i class="fa fa-instagram"></i></a></li>
                             </ul>
                         </div> <!-- footer about -->
@@ -212,7 +212,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-6">
                         <div class="footer-link mt-40">
                             <div class="footer-title pb-25">
-                                <h6>Navigatsiya</h6>
+                                <h6>{% trans "Navigatsiya" %}</h6>
                             </div>
                             <ul>
                                 <li><a href="{% url 'homepage' %}"><i class="fa fa-angle-right"></i>{% trans "Bosh sahifa" %}</a></li>
@@ -253,13 +253,14 @@
                                 </li>
                                 <li>
                                     <div class="icon">
-                                        <!-- <i class="fa fa-envelope-o"></i> -->
-                                        <img class="footer-icon-1" src="{% static "images/all-icon/email.svg" %}" alt="icon">
+                                        <!-- <i class="fa fa-phone"></i> -->
+                                        <img class="footer-icon-1" src="{% static "images/all-icon/call.svg" %}" alt="icon">
                                     </div>
                                     <div class="cont">
-                                        <p>info@yourmail.com</p>
+                                        <p>+998-99-880-59-32</p>
                                     </div>
                                 </li>
+                                
                             </ul>
                         </div> <!-- footer address -->
                     </div>

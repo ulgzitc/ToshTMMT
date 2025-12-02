@@ -13,8 +13,8 @@
                 <div class="row">
                     <div class="col-xl-7 col-lg-9">
                         <div class="slider-cont">
-                            <h1 data-animation="bounceInLeft" data-delay="1s">{% trans "Ta'lim uchun to'g'ri mavzuni tanlang" %}</h1>
-                            <p data-animation="fadeInUp" data-delay="1.3s">Donec vitae sapien ut libearo venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt  Sed fringilla mauri amet nibh.</p>
+                            <h1 data-animation="bounceInLeft" data-delay="1s">{% trans "Ta'lim uchun to'g'ri joyni tanlang" %}</h1>
+                            <p data-animation="fadeInUp" data-delay="1.3s">{% blocktrans %}Turizm, servis va zamonaviy kasblar sohasida mustahkam bilim, amaliy tajriba va xalqaro imkoniyatlarga ega bo‘ling. Toshkent turizm va madaniy meros texnikumi — kelajagingizni ishonchli bilim, kuchli tajriba va to‘g‘ri yo‘l bilan quradigan maskan.{% endblocktrans %}</p>
                             <ul>
                                 <li><a data-animation="fadeInUp" data-delay="1.6s" class="main-btn" href="{% url 'tarix' %}">{% trans "Batafsil" %}</a></li>
                             </ul>
@@ -30,10 +30,9 @@
                     <div class="col-xl-7 col-lg-9">
                         <div class="slider-cont">
                             <h1 data-animation="bounceInLeft" data-delay="1s">{% trans "Ta'lim uchun to'g'ri mavzuni tanlang" %}</h1>
-                            <p data-animation="fadeInUp" data-delay="1.3s">Donec vitae sapien ut libearo venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt  Sed fringilla mauri amet nibh.</p>
+                            <p data-animation="fadeInUp" data-delay="1.3s">{% blocktrans %}Zamonaviy yo‘nalishlar, tajribali ustozlar va amaliyotga yo‘naltirilgan ta’lim — bu sizga mustahkam kasbiy poydevor beradi. To‘g‘ri muassasani tanlab, kelajagingiz sari ishonch bilan qadam qo‘ying.{% endblocktrans %}</p>
                             <ul>
                                 <li><a data-animation="fadeInUp" data-delay="1.6s" class="main-btn" href="{% url 'tarix' %}">{% trans "Batafsil" %}</a></li>
-                                <li><a data-animation="fadeInUp" data-delay="1.9s" class="main-btn main-btn-2" href="#">{% trans "Boshlash" %}</a></li>
                             </ul>
                         </div>
                     </div>
@@ -47,10 +46,9 @@
                     <div class="col-xl-7 col-lg-9">
                         <div class="slider-cont">
                             <h1 data-animation="bounceInLeft" data-delay="1s">{% trans "Ta'lim uchun to'g'ri mavzuni tanlang" %}</h1>
-                            <p data-animation="fadeInUp" data-delay="1.3s">Donec vitae sapien ut libearo venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt  Sed fringilla mauri amet nibh.</p>
+                            <p data-animation="fadeInUp" data-delay="1.3s">{% blocktrans %}Turizm, servis va zamonaviy kasblar sohasida mustahkam bilim, amaliy tajriba va xalqaro imkoniyatlarga ega bo‘ling. Toshkent turizm va madaniy meros texnikumi — kelajagingizni ishonchli bilim, kuchli tajriba va to‘g‘ri yo‘l bilan quradigan maskan.{% endblocktrans %}</p>
                             <ul>
                                 <li><a data-animation="fadeInUp" data-delay="1.6s" class="main-btn" href="{% url 'tarix' %}">{% trans "Batafsil" %}</a></li>
-                                <li><a data-animation="fadeInUp" data-delay="1.9s" class="main-btn main-btn-2" href="#">{% trans "Boshlash" %}</a></li>
                             </ul>
                         </div>
                     </div>
@@ -75,7 +73,7 @@
                     <div class="col-lg-6 offset-lg-1 col-md-8 offset-md-2 col-sm-8 offset-sm-2 col-8 offset-2">
                         <div class="row category-slied mt-40">
                             <div class="col-lg-4">
-                                <a href="./yonalishlar.html">
+                                <a href="{% url 'yunalishlar' %}">
                                     <span class="singel-category text-center color-1">
                                         <span class="icon">
                                             <img src="{% static 'images/all-icon/ctg-1.png' %}" alt="Icon">
@@ -87,7 +85,7 @@
                                 </a>
                             </div>
                             <div class="col-lg-4">
-                                <a href="./yonalishlar.html">
+                                <a href="{% url 'yunalishlar' %}">
                                     <span class="singel-category text-center color-2">
                                         <span class="icon">
                                             <img src="{% static 'images/all-icon/ctg-2.png' %}" alt="Icon">
@@ -99,7 +97,7 @@
                                 </a>
                             </div>
                             <div class="col-lg-4">
-                                <a href="./yonalishlar.html">
+                                <a href="{% url 'yunalishlar' %}">
                                     <span class="singel-category text-center color-3">
                                         <span class="icon">
                                             <img src="{% static 'images/all-icon/ctg-3.png' %}" alt="Icon">
@@ -111,7 +109,7 @@
                                 </a>
                             </div>
                             <div class="col-lg-4">
-                                <a href="./yonalishlar.html">
+                                <a href="{% url 'yunalishlar' %}">
                                     <span class="singel-category text-center color-1">
                                         <span class="icon">
                                             <img src="{% static 'images/all-icon/ctg-4.png' %}" alt="Icon">
@@ -123,7 +121,7 @@
                                 </a>
                             </div>
                             <div class="col-lg-4">
-                                <a href="./yonalishlar.html">
+                                <a href="{% url 'yunalishlar' %}">
                                     <span class="singel-category text-center color-2">
                                         <span class="icon">
                                             <img src="{% static 'images/all-icon/ctg-2.png' %}" alt="Icon">
@@ -135,7 +133,7 @@
                                 </a>
                             </div>
                             <div class="col-lg-4">
-                                <a href="./yonalishlar.html">
+                                <a href="{% url 'yunalishlar' %}">
                                     <span class="singel-category text-center color-3">
                                         <span class="icon">
                                             <img src="{% static 'images/all-icon/ctg-6.png' %}" alt="Icon">
@@ -147,7 +145,7 @@
                                 </a>
                             </div>
                             <div class="col-lg-4">
-                                <a href="./yonalishlar.html">
+                                <a href="{% url 'yunalishlar' %}">
                                     <span class="singel-category text-center color-1">
                                         <span class="icon">
                                             <img src="{% static 'images/all-icon/ctg-7.png' %}" alt="Icon">
@@ -159,7 +157,7 @@
                                 </a>
                             </div>
                             <div class="col-lg-4">
-                                <a href="./yonalishlar.html">
+                                <a href="{% url 'yunalishlar' %}">
                                     <span class="singel-category text-center color-2">
                                         <span class="icon">
                                             <img src="{% static 'images/all-icon/ctg-2.png' %}" alt="Icon">
@@ -190,11 +188,12 @@
                         <h2>{% trans "Xush kelibsiz!" %}</h2>
                     </div> <!-- section title -->
                     <div class="about-cont">
-                        <p>
+                        <p>{% blocktrans %}
                             Toshkent turizm va madaniy meros texnikumi — 1979 yildan buyon O‘zbekiston va Markaziy Osiyoda turizm, 
                             mehmondo‘stlik va xizmat ko‘rsatish sohalari bo‘yicha yetuk mutaxassislar tayyorlab kelayotgan yetakchi ta’lim muassasidir. 
                             Texnikumda zamonaviy ta’lim usullari, malakali ustozlar, dual o‘qish imkoniyati va keng hamkorlik tarmog‘i mavjud. 
                             Biz bilan birga kelajagingizni ishonch bilan qurishingiz mumkin.
+                            {% endblocktrans %}
                         </p>
                         <a href="{% url 'tarix' %}" class="main-btn mt-55">{% trans "Ko'proq" %}</a>
                     </div>
