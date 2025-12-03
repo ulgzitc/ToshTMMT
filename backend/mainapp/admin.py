@@ -12,6 +12,7 @@ class GalleryImageInline(admin.TabularInline):
 @admin.register(Elonlar)
 class ElonlarAdmin(admin.ModelAdmin):
     list_display = ['id', 'title', 'slug', 'date']
+    readonly_fields = ['slug',]
     list_display_links = ['title']
     prepopulated_fields = {'slug': ('title',)}
     inlines = [GalleryImageInline]
@@ -20,6 +21,7 @@ class ElonlarAdmin(admin.ModelAdmin):
 @admin.register(Yangiliklar)
 class YangiliklarAdmin(admin.ModelAdmin):
     list_display = ['id', 'title', 'slug', 'date']
+    readonly_fields = ['slug',]
     list_display_links = ['title']
     prepopulated_fields = {'slug': ('title',)}
     inlines = [GalleryImageInline]

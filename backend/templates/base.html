@@ -82,7 +82,7 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="header-opening-time text-lg-right text-center">
-                            <p>{% blocktrans %}Murojaatlar vaqti: 9:00 - 17:00 (Dushanba - Juma){% endblocktrans %}</p>
+                            <p>{% blocktrans %}Murojaatlar vaqti: 9:00 - 17:00 (Dushanba - Shanba){% endblocktrans %}</p>
                         </div>
                     </div>
                 </div> </div> </div> <div class="header-logo-support pt-10 pb-10">
@@ -144,7 +144,7 @@
                                         <a {% if request.resolver_match.url_name == "yunalishlar" %}class="active"{% endif %} href="{% url 'yunalishlar' %}">{% trans "Yo'nalishlar" %}</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a {% if request.resolver_match.url_name == "rahbariyat" %}class="active"{% endif %} href="{% url 'rahbariyat' %}">{% trans "Raxbariyat" %}</a>
+                                        <a {% if request.resolver_match.url_name == "rahbariyat" %}class="active"{% endif %} href="{% url 'rahbariyat' %}">{% trans "Rahbariyat" %}</a>
                                     </li>
                                     <li class="nav-item">
                                         <a {% if request.resolver_match.url_name == "hamkorlik" %}class="active"{% endif %} href="{% url 'hamkorlik' %}">{% trans "Hamkorlik" %}</a>
