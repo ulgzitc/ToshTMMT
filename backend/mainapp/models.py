@@ -35,45 +35,45 @@ class Yangiliklar(BasePost):
 
 class Yunalishlar(models.Model):
 
-    KURS = {
-        "9-sinf" : "9-sinf",
-        "11-sinf" : "11-sinf",
-    }
+    KURS = [
+        ("9-SINF", "9-SINF"),
+        ("11-SINF", "11-SINF"),
+    ]
 
-    KURS_RU = {
-        "9-х классов" : "9-х классов",
-        "11-х классов" : "11-х классов"
-    }
+    KURS_RU = [
+        ("9-Х КЛАССОВ", "9-Х КЛАССОВ"),
+        ("11-Х КЛАССОВ", "11-Х КЛАССОВ"),
+    ]
 
-    KURS_EN = {
-        "9th grade" : "9th grade",
-        "11th grade" : "11th grade",
-    }
+    KURS_EN = [
+        ("9TH GRADE", "9TH GRADE"),
+        ("11TH GRADE", "11TH GRADE"),
+    ]
 
-    SHAKL = {
-        "Kunduzgi" : "Kunduzgi",
-        "Dual" : 'Dual',
-    }
+    SHAKL = [
+        ("KUNDUZGI", "KUNDUZGI"),
+        ("DUAL", "DUAL"),
+    ]
 
-    SHAKL_RU = {
-        "Очную" : "Очную",
-        "Дуальную" : "Дуальную",
-    }
+    SHAKL_RU = [
+        ("ОЧНУЮ", "ОЧНУЮ"),
+        ("ДУАЛЬНУЮ", "ДУАЛЬНУЮ"),
+    ]
 
-    SHAKL_EN = {
-        "Daytime" : "Daytime",
-        "Dual" : "Dual",
-    }
+    SHAKL_EN = [
+        ("DAYTIME", "DAYTIME"),
+        ("DUAL", "DUAL"),
+    ]
 
     title = models.CharField(_('Title'), max_length=20, null=False, blank=False)
-    description = models.TextField(_('Description'), max_length=240, null=False, blank=False)
+    description = models.TextField(_('Description'), max_length=150, null=False, blank=False)
     image = models.ImageField(upload_to='yunalishlar/', blank=False, null=False)
-    kurs = models.CharField(_('Kurs'), choices=KURS, default={"9-sinf":"9-sinf"}, null=False, blank=False)
-    kurs_ru = models.CharField(_('Kurs'), choices=KURS_RU, default={"9-х классов":"9-х классов"}, null=False, blank=False)
-    kurs_en = models.CharField(_('Kurs'), choices=KURS_EN, default={"9th grade":"9th grade"}, null=False, blank=False)
-    shakl = models.CharField(_('Shakl'), choices=SHAKL, default={"Kunduzgi" : "Kunduzgi"}, null=False, blank=False)
-    shakl_ru = models.CharField(_('Shakl'), choices=SHAKL_RU, default={"Очную" : "Очную"}, null=False, blank=False)
-    shakl_en = models.CharField(_('Shakl'), choices=SHAKL_EN, default={"Daytime" : "Daytime"}, null=False, blank=False)
+    kurs = models.CharField(_('Kurs UZ'), choices=KURS, default={"9-SINF":"9-SINF"}, null=False, blank=False)
+    kurs_ru = models.CharField(_('Kurs RU'), choices=KURS_RU, default={"9-Х КЛАССОВ":"9-Х КЛАССОВ"}, null=False, blank=False)
+    kurs_en = models.CharField(_('Kurs EN'), choices=KURS_EN, default={"9TH GRADE":"9TH GRADE"}, null=False, blank=False)
+    shakl = models.CharField(_('Shakl UZ'), choices=SHAKL, default={"KUNDUZGI" : "KUNDUZGI"}, null=False, blank=False)
+    shakl_ru = models.CharField(_('Shakl RU'), choices=SHAKL_RU, default={"ОЧНУЮ" : "ОЧНУЮ"}, null=False, blank=False)
+    shakl_en = models.CharField(_('Shakl EN'), choices=SHAKL_EN, default={"DAYTIME" : "DAYTIME"}, null=False, blank=False)
 
     def __str__(self):
         return self.title

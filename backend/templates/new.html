@@ -17,7 +17,7 @@
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="{% url 'homepage' %}">{% trans "Bosh sahifa" %}</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page"><a href="{% url "yangiliklar" %}">{% trans "Yangiliklar" %}</a></li>
+                                <li class="breadcrumb-item active" aria-current="page"><a href="{% url "yangiliklar" %}">{% trans "Yangiliklar" %}</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">{{ object.title }}</li>
                             </ol>
                         </nav>
@@ -31,89 +31,113 @@
         <div class="container">
             <div class="events-area">
                 <div class="row">
+                    <!-- MAIN CONTENT COLUMN -->
                     <div class="col-lg-8">
                         <div class="events-left">
                             <h3>{{ object.title }}</h3>
-                            <span><i class="fa fa-calendar"></i> {{ object.date }}</span>
+                            <span class="news-date-time"><i class="fa fa-calendar"></i> {{ object.date }}</span>
 
                             
-{% if object.gallery.all %}
+                            {% if object.gallery.all %}
+                            <!-- Slideshow for Gallery Images -->
+                            <div class="slideshow-container" style="max-width:1000px; position:relative; margin:auto;">
 
-<div class="slideshow-container" style="max-width:1000px; position:relative; margin:auto;">
+                                {% for image in object.gallery.all %}
+                                  <div class="mySlides" style="display:none;">
 
-{% for image in object.gallery.all %}
-  <div class="mySlides" style="display:none;">
+                                    <img src="{{ image.image.url }}" style="width:100%; vertical-align:middle;" alt="{{ image.caption|default:object.title }}">
 
-    <img src="{{ image.image.url }}" style="width:100%; vertical-align:middle;">
+                                    <div class="text"
+                                         style="color:#f2f2f2; font-size:16px; padding:10px 12px; position:absolute; bottom:0; width:100%; color:white; text-align:center; background:rgba(0,0,0,0.5);">
+                                      {{ image.caption|default:object.title }}
+                                    </div>
+                                  </div>
+                                {% endfor %}
 
-    <div class="text"
-         style="color:#f2f2f2; font-size:16px; padding:10px 12px; position:absolute; bottom:0; width:100%; color:white; text-align:center; background:rgba(0,0,0,0.5);">
-      {{ image.caption|default:object.title }}
-    </div>
-  </div>
-{% endfor %}
+                                  <a class="prev"
+                                     onclick="plusSlides(-1)"
+                                     style="cursor:pointer; position:absolute; top:50%; left:0; padding:16px; color:white; font-weight:bold; font-size:18px; background:rgba(0,0,0,0.3); border-radius:3px; user-select:none; transform:translateY(-50%);">
+                                    &#10094;
+                                  </a>
 
-  <a class="prev"
-     onclick="plusSlides(-1)"
-     style="cursor:pointer; position:absolute; top:50%; left:0; padding:16px; color:white; font-weight:bold; font-size:18px; background:rgba(0,0,0,0.3); border-radius:3px; user-select:none; transform:translateY(-50%);">
-    &#10094;
-  </a>
+                                  <a class="next"
+                                     onclick="plusSlides(1)"
+                                     style="cursor:pointer; position:absolute; top:50%; right:0; padding:16px; color:white; font-weight:bold; font-size:18px; background:rgba(0, 0, 0, 0.3); border-radius:3px; user-select:none; transform:translateY(-50%);">
+                                    &#10095;
+                                  </a>
 
-  <a class="next"
-     onclick="plusSlides(1)"
-     style="cursor:pointer; position:absolute; top:50%; right:0; padding:16px; color:white; font-weight:bold; font-size:18px; background:rgba(0, 0, 0, 0.3); border-radius:3px; user-select:none; transform:translateY(-50%);">
-    &#10095;
-  </a>
+                            </div>
+                            <br>
 
-</div>
-<br>
+                            <div style="text-align:center;">
+                                {% for _ in object.gallery.all %}
+                                <span class="dot"
+                                      onclick="currentSlide({{ forloop.counter }})"
+                                      style="cursor:pointer; height:12px; width:12px; margin:5px; background-color:#bbb; border-radius:50%; display:inline-block;">
+                                </span>
+                                {% endfor %}
+                            </div> 
 
-<div style="text-align:center;">
-    {% for _ in object.gallery.all %}
-    <span class="dot"
-          onclick="currentSlide({{ forloop.counter }})"
-          style="cursor:pointer; height:12px; width:12px; margin:5px; background-color:#bbb; border-radius:50%; display:inline-block;">
-    </span>
-    {% endfor %}
-</div> 
+                            {% else %}
 
-{% else %}
+                            <!-- Fallback for Single Featured Image -->
+                            <div class="featured-image pt-30">
+                              <img src="{{ object.image.url }}" style="width:100%; border-radius: 8px;" alt="Featured Image">
+                            </div>
 
-<div class="mySlides" style="display:block;">
-  <img src="{{ object.image.url }}" style="width:100%;" alt="Featured Image">
-</div>
-
-{% endif %}
+                            {% endif %}
 
 
-                            <p>{{ object.description }}</p>
-
+                            <p class="pt-30">{{ object.description }}</p>
 
 
                         </div> <!-- events left -->
                     </div>
+                    
+                    <!-- SIDEBAR COLUMN -->
                     <div class="col-lg-4">
                         <div class="events-right">
-                            <div class="events-address mt-30">
-                                <ul>
-                                    <br>
-                                    <h4>{% trans "Ulashish :" %}</h4>
-
+                            <div class="share-widget mt-30">
+                                <h4 class="share-title">{% trans "Ulashish :" %}</h4>
+                                
+                                <ul class="share-links">
+                                    <!-- Facebook -->
                                     <li>
-                                        <div class="singel-address">
-                                             <ul class="share">
-                                                <li><a href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}" target="_blank"><i class="fa fa-facebook-f"><h6>Facebook</h6></i></a></li>
-                                                <li><a href="https://twitter.com/intent/tweet?url={{ request.build_absolute_uri }}" target="_blank"><i class="fa fa-twitter"><h6>Twitter</h6></i></a></li>
-                                                <li><a href="https://t.me/share/url?url={{ request.build_absolute_uri }}" target="_blank"><i class="fa fa-telegram"><h6>Telegram</h6></i></a></li>
-                                                <li><a href="https://wa.me/?text={{ request.build_absolute_uri }}" target="_blank"><i class="fa fa-whatsapp"><h6>WhatsApp</h6></i></a></li>
-                                                <li><a href="https://www.linkedin.com/sharing/share-offsite/?url={{ request.build_absolute_uri }}" target="_blank"><i class="fa fa-linkedin"><h6>LinkedIn</h6></i></a></li>
-                                            </ul>
-                                        </div> <!-- singel address -->
+                                        <a href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}" target="_blank" class="facebook-share">
+                                            <i class="fa fa-facebook-f"></i>
+                                            <span>Facebook</span>
+                                        </a>
                                     </li>
-
-
+                                    <!-- Twitter -->
+                                    <li>
+                                        <a href="https://twitter.com/intent/tweet?url={{ request.build_absolute_uri }}" target="_blank" class="twitter-share">
+                                            <i class="fa fa-twitter"></i>
+                                            <span>Twitter</span>
+                                        </a>
+                                    </li>
+                                    <!-- Telegram -->
+                                    <li>
+                                        <a href="https://t.me/share/url?url={{ request.build_absolute_uri }}" target="_blank" class="telegram-share">
+                                            <i class="fa fa-telegram"></i>
+                                            <span>Telegram</span>
+                                        </a>
+                                    </li>
+                                    <!-- WhatsApp -->
+                                    <li>
+                                        <a href="https://wa.me/?text={{ request.build_absolute_uri }}" target="_blank" class="whatsapp-share">
+                                            <i class="fa fa-whatsapp"></i>
+                                            <span>WhatsApp</span>
+                                        </a>
+                                    </li>
+                                    <!-- LinkedIn -->
+                                    <li>
+                                        <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ request.build_absolute_uri }}" target="_blank" class="linkedin-share">
+                                            <i class="fa fa-linkedin"></i>
+                                            <span>LinkedIn</span>
+                                        </a>
+                                    </li>
                                 </ul>
-                            </div> <!-- events address -->
+                            </div> <!-- share widget -->
                         </div> <!-- events right -->
                     </div>
                 </div> <!-- row -->

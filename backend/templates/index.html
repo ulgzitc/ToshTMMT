@@ -251,9 +251,9 @@
             {% endif %}
             <div class="news-cont">
                 <ul>
-                    {% if yangiliklar.0.slug %}
-                        <li><a href="{% url 'yangilik' yangiliklar.0.slug %}"><i class="fa fa-calendar"></i>{{ yangiliklar.0.date }} </a></li>
-                    {% endif %}
+                    <li>
+                        <span><i class="fa fa-calendar"></i>  {{ yangiliklar.1.date }}</span>
+                    </li>
                 </ul>
                 {% if yangiliklar.0.slug %}
                     <a href="{% url 'yangilik' yangiliklar.0.slug %}"><h3>{{ yangiliklar.0.title|truncatechars:100 }}</h3></a>
@@ -280,9 +280,9 @@
                 <div class="col-sm-8">
                     <div class="news-cont">
                         <ul>
-                            {% if yangiliklar.1.slug %}
-                            <li><a href="{% url 'yangilik' yangiliklar.1.slug %}"><i class="fa fa-calendar"></i>{{ yangiliklar.1.date }} </a></li>
-                            {% endif %}
+                            <li>
+                                <span><i class="fa fa-calendar"></i>  {{ yangiliklar.1.date }}</span>
+                            </li>
                         </ul>
                         {% if yangiliklar.1.slug %}
                         <a href="{% url 'yangilik' yangiliklar.1.slug %}"><h3>{{ yangiliklar.1.title|truncatechars:50 }}</h3></a>
@@ -309,9 +309,9 @@
                 <div class="col-sm-8">
                     <div class="news-cont">
                         <ul>
-                            {% if yangiliklar.2.slug %}
-                            <li><a href="{% url 'yangilik' yangiliklar.2.slug %}"><i class="fa fa-calendar"></i>{{ yangiliklar.2.date }} </a></li>
-                            {% endif %}
+                            <li>
+                                <span><i class="fa fa-calendar"></i>  {{ yangiliklar.2.date }}</span>
+                            </li>
                         </ul>
                         {% if yangiliklar.2.slug %}
                         <a href="{% url 'yangilik' yangiliklar.2.slug %}"><h3>{{ yangiliklar.2.title|truncatechars:50 }}</h3></a>
@@ -338,9 +338,9 @@
                 <div class="col-sm-8">
                     <div class="news-cont">
                         <ul>
-                            {% if yangiliklar.3.slug %}
-                            <li><a href="{% url 'yangilik' yangiliklar.3.slug %}"><i class="fa fa-calendar"></i>{{ yangiliklar.3.date }} </a></li>
-                            {% endif %}
+                            <li>
+                                <span><i class="fa fa-calendar"></i>  {{ yangiliklar.3.date }}</span>
+                            </li>
                         </ul>
                         {% if yangiliklar.3.slug %}
                         <a href="{% url 'yangilik' yangiliklar.3.slug %}"><h3>{{ yangiliklar.3.title|truncatechars:50 }}</h3></a>

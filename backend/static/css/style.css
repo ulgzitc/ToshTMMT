@@ -848,14 +848,28 @@ p {
 
 .slider-search .nice-select {
 	width: 100%;
-	height: 55px;
-	line-height: 55px;
+	height: 30px;
+	line-height: 30px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     border: 0;
 }
+
+.nice-select {
+    height: 30px;
+    line-height: 30px;
+    width: 100px;
+}
+
+.nice-select .option {
+    line-height: 30px;
+    min-height: 30px;
+    width: 90px;
+    padding-left: 26px;
+}
+
 .slider-search .nice-select span {
-	font-size: 16px;
+	font-size: 15px;
     font-family: 'Poppins', sans-serif;
     color: #07294d;
     font-weight: 400;
@@ -1059,15 +1073,39 @@ p {
     border-bottom: 0;
 }
 
+/*HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH*/
+
+.singel-news .news-cont h3{
+    -webkit-transition: all 0.4s linear;
+    transition: color 0.4s linear;
+}
+
+.singel-news .news-cont a:hover h3{
+    color: #ffc600;
+}
+
+.news-cont ul li span{
+    font-size: 14px;
+    color: #8a8a8a;
+    margin-right: 20px;
+}
+
+
 .about-event ul li .singel-event span{
     font-size: 14px;
     color: #8a8a8a;
     margin-right: 20px;
 }
+.news-cont ul li span i{
+    color: #ffc600;
+    margin-right: 3px;
+}
+
 .about-event ul li .singel-event span i{
     color: #ffc600;
     margin-right: 3px;
 }
+
 .about-event ul li .singel-event a{
     display: block;
 }
@@ -4096,3 +4134,101 @@ p.form-message.error {
     /* Ensure no parent container is aggressively overriding global flex settings */
     display: block !important; 
 }
+
+
+/* ----------------------------------------------------------- */
+/* NEWS DETAIL PAGE - SIDEBAR STYLING (Share Widget)          */
+/* ----------------------------------------------------------- */
+
+.share-widget {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.share-widget .share-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #07294d;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.share-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.share-links li {
+    margin-bottom: 10px;
+}
+
+.share-links a {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 6px;
+    color: #fff; /* Text color is white */
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.share-links a i {
+    font-size: 18px;
+    margin-right: 15px;
+    width: 20px; /* Ensures icons align perfectly */
+    text-align: center;
+}
+
+/* Specific Platform Colors */
+.facebook-share {
+    background-color: #3b5998;
+}
+.facebook-share:hover {
+    background-color: #2f477a;
+}
+
+.twitter-share {
+    background-color: #1da1f2;
+}
+.twitter-share:hover {
+    background-color: #168acd;
+}
+
+.telegram-share {
+    background-color: #0088cc;
+}
+.telegram-share:hover {
+    background-color: #0077b3;
+}
+
+.whatsapp-share {
+    background-color: #25d366;
+}
+.whatsapp-share:hover {
+    background-color: #1eaa4e;
+}
+
+.linkedin-share {
+    background-color: #0077b5;
+}
+.linkedin-share:hover {
+    background-color: #006093;
+}
+
+/* Optional: Clean up the date span */
+.news-date-time {
+    display: inline-block;
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 30px;
+    padding-left: 5px;
+}
+.news-date-time i {
+    margin-right: 5px;
+}
+
