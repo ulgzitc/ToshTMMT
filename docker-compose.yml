@@ -2,12 +2,12 @@ services:
   web:
     build: .
     container_name: django_app
-    # Internal exposure only, no need to change this
     expose:
       - 8000
     volumes:
       - static_volume:/app/staticfiles
       - media_volume:/app/media
+
     depends_on:
       db:
         condition: service_healthy
@@ -15,12 +15,11 @@ services:
     env_file:
       - .env
 
+
   db:
     image: postgres:17
-    # CHANGE 2: Map Host 9099 -> Container 5432
-    # This puts your DB access in your desired range
     ports:
-      - 9099:5432
+      - 5432:5432
     container_name: postgres_db
     volumes:
       - postgres_db:/var/lib/postgresql/data/
@@ -37,15 +36,15 @@ services:
 
   frontend:
     image: nginx:latest
-    # CHANGE 3: Map Host 9090 -> Container 9090
     ports:
-      - 9090:9090
+      - 80:80
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf:ro
       - static_volume:/static:ro
       - media_volume:/media:ro
     depends_on:
       - web
+
 
 volumes:
   postgres_db:
