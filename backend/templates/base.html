@@ -7,10 +7,21 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
     <title>{% block title %}{% endblock %}</title>
+
+    <meta name="description" content="{% block meta_description %}
+        Toshkent Turizm va Madaniy Meros texnikumi | Turizm, mehmonxona, servis, IT yo‘nalishlarida amaliyotga yo‘naltirilgan ta’lim. 2+2 qo‘shma dastur imkoniyati. 1979 yildan buyon tajriba.
+    {% endblock %}">
+
+    <meta name="keywords" content="{% block meta_keywords %}
+        toshkent turizm va madaniy meros texnikumi, turizm texnikum, toshkent texnikum, madaniy meros, mehmonxona, 2+2 dasturi, dual ta'lim, turizm, IT, servis, ttvammt
+    {% endblock %}">
+    
+    <link rel="canonical" href="{{ request.build_absolute_uri }}">
+
+    <link rel="shortcut icon" href="{% static 'images/favicon.png' %}" type="image/png">
     
     <!--====== Favicon Icon ======-->
     <link rel="shortcut icon" href="{% static 'images/favicon.png' %}" type="image/png">
