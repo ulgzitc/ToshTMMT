@@ -55,12 +55,9 @@ class YunalishView(ListView):
     
     
 
-
-
-############ Qo`shimcha
-class TarixView(DetailView):
+class TarixView(ListView):
     model = Haqimizda
-    context_object_name = 'object'
+    context_object_name = 'objects'
     template_name = 'haqida.html'
 
 class RaxbariyatView(ListView):
