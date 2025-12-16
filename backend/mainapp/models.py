@@ -165,4 +165,4 @@ class Haqimizda(models.Model):
     description = models.TextField(blank=False, null=False)
 
     class Meta:
-        verbose_name_plural = _("Haqimizda")
+        verbose_name_plural = _("Biz haqimizda")
