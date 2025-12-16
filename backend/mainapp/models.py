@@ -22,16 +22,24 @@ class BasePost(models.Model):
     def __str__(self):
         return self.title
 
+    
+
 
 
 class Elonlar(BasePost):
     class Meta:
         verbose_name_plural = _('Elonlar')
 
+    def get_absolute_url(self):
+        return f"/elonlar/{self.slug}/"
+
 
 class Yangiliklar(BasePost):
     class Meta:
         verbose_name_plural = _('Yangiliklar')
+
+    def get_absolute_url(self):
+        return f"/yangiliklar/{self.slug}/"
 
 class Yunalishlar(models.Model):
 
@@ -106,6 +114,9 @@ class Yunalishlar(models.Model):
         else:
             return self.shakl
 
+    def get_absolute_url(self):
+        return f"/yo`nalishlar/{self.slug}/"
+
 
 
 
@@ -160,9 +171,17 @@ class Rahbariyat(models.Model):
     def __str__(self):
         return self.ism_familya
 
+    def get_absolute_url(self):
+        return "/rahbariyat/"
+    
+
 class Haqimizda(models.Model):
     title = models.CharField(blank=False, null=False)
     description = models.TextField(blank=False, null=False)
 
     class Meta:
         verbose_name_plural = _("Biz haqimizda")
+
+    def get_absolute_url(self):
+        return "/hamkorlik/"
+    
