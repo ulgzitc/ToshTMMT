@@ -19,7 +19,7 @@ services:
   db:
     image: postgres:17
     ports:
-      - 9003:5433
+      - 9003:5432
     container_name: postgres_db
     volumes:
       - postgres_db:/var/lib/postgresql/data/
