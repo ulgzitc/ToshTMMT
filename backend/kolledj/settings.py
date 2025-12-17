@@ -109,7 +109,6 @@ DATABASES = {
     }
 }
 '''
-
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
 
@@ -168,7 +167,8 @@ CSRF_COOKIE_SECURE = False      #Production True
 SESSION_COOKIE_SECURE = False   #Production True
 #SECURE_SSL_REDIRECT = True  # Only HTTPS
 X_FRAME_OPTIONS = 'DENY'
-#SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')  # Only HTTPS
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')  # Only HTTPS
 
 CORS_ALLOWED_ORIGINS = []
 
@@ -177,7 +177,6 @@ CORS_ALLOW_CREDENTIALS=True
 CSRF_TRUSTED_ORIGINS = os.environ.get("CSRF_TRUSTED_ORIGINS", "").split(",")
 
 USE_X_FORWARDED_HOST = True
-SECURE_PROXY_SSL_HEADER = None
 
 CSRF_COOKIE_DOMAIN = os.environ['CSRF_COOKIE_DOMAIN']
 
