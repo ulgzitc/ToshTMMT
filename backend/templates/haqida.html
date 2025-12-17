@@ -83,30 +83,38 @@
                 </div>
             </div> <!-- row -->
         </div> <!-- about items -->
-
+        <br>
+        <br>
+        <br>
+        <hr>
+        <br>
+        <br>
         {% for object in objects %}
+
         <div class="row">
-            {% for image in object.gallery.all %}
             <div class="col-lg-7">
+                {% for image in object.gallery.all %}
+                <!-- FOR IMG -->
                 <div class="about-image mt-50">
                     <img src="{{ image.image.url }}" alt="About">
                 </div>
+                <!-- FOR IMG -->
                 {% endfor %}
             </div>
             <div class="col-lg-5">
                 <div class="section-title mt-50">
+                    <!-- TEXT TITLE -->
                     <h2>{{ object.title }}</h2>
-                </div> <!-- section title -->
+                </div>
                 <div class="about-cont">
+                    <!-- ABOUT TEXT -->
                     <p>{{ object.description }}</p>
                 </div>
-            </div> <!-- about cont -->
-        </div> <!-- row -->
+            </div>
+        </div>
         {% endfor %}
-
-    </div> <!-- container -->
-</section>
-
+        </div> <!-- container -->
+    </section>
 
 <div id="patnar-logo" class="pt-80 pb-80">
     <div class="container">

@@ -1,6 +1,17 @@
 from django.urls import path
+from django.contrib.sitemaps.views import sitemap
 
 from .views import *
+from .sitemaps import *
+
+sitemaps = {
+    'static' : StaticSitemap,
+    'haqimizda' : HaqimizdaSitemap,
+    'rahbariyat' : RahbariyatSitemap,
+    'yunalishlar' : YunalishlarSitemap,
+    'yangiliklar' : YangiliklarSitemap,
+    'elonlar' : ElonlarSitemap
+}
 
 
 urlpatterns = [
@@ -13,4 +24,5 @@ urlpatterns = [
     path('yo`nalishlar/', YunalishView.as_view(), name='yunalishlar'),
     path('rahbariyat/', RaxbariyatView.as_view(), name='rahbariyat'),
     path('hamkorlik/', HamkorlikView.as_view(), name='hamkorlik'),
+    path('sitemap.xml/', sitemap, {'sitemaps' : sitemaps}, name="django.contrib.sitemaps.views.sitemap"),
 ]
