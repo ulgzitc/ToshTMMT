@@ -438,7 +438,7 @@ msgstr ""
 "«Санкт-Петербургский колледж туризма и гостиничного сервиса», Профессиональный колледж № 8 (Казахстан) и Профессиональный колледж № 13 (Казахстан)."
 
 #: templates/index.html:16
-msgid "Ta'lim uchun to'g'ri joyni tanlang"
+msgid "Ta'lim uchun to'g'ri manzilni tanlang"
 msgstr "Выберите правильное место для обучения"
 
 #: templates/index.html:17 templates/index.html:49

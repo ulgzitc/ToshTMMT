@@ -456,8 +456,8 @@ msgid "Batafsil"
 msgstr "Read more"
 
 #: templates/index.html:32 templates/index.html:48
-msgid "Ta'lim uchun to'g'ri mavzuni tanlang"
-msgstr "Choose the right subject for education"
+msgid "Ta'lim uchun to'g'ri manzilni tanlang"
+msgstr "Choose the right place for education"
 
 #: templates/index.html:33
 msgid ""
