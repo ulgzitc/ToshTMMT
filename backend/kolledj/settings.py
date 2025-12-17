@@ -24,12 +24,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-e42-m*xt7#o*yd=q-@m3(+(4z%)80^&za(mu+-g)o)%i=#!jd5' #os.environ['SECRET_KEY']
+SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get("DEBUG", "False").lower() in ["true", "1", "yes"]
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "").split(",")
 
 
 # Application definition
@@ -89,7 +89,7 @@ WSGI_APPLICATION = 'kolledj.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-'''
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -108,7 +108,7 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
+'''
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
@@ -162,23 +162,24 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 # Security checks
-#SECURE_BROWSER_XSS_FILTER = True
-#SECURE_CONTENT_TYPE_NOSNIFF = True
+SECURE_BROWSER_XSS_FILTER = True
+SECURE_CONTENT_TYPE_NOSNIFF = True
 CSRF_COOKIE_SECURE = False      #Production True
 SESSION_COOKIE_SECURE = False   #Production True
-SECURE_SSL_REDIRECT = False  # Only HTTPS
-#X_FRAME_OPTIONS = 'DENY'
+#SECURE_SSL_REDIRECT = True  # Only HTTPS
+X_FRAME_OPTIONS = 'DENY'
 #SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')  # Only HTTPS
 
 CORS_ALLOWED_ORIGINS = []
 
 CORS_ALLOW_CREDENTIALS=True
 
-#CSRF_TRUSTED_ORIGINS = os.environ.get("CSRF_TRUSTED_ORIGINS", "").split(",")
+CSRF_TRUSTED_ORIGINS = os.environ.get("CSRF_TRUSTED_ORIGINS", "").split(",")
 
-#USE_X_FORWARDED_HOST = True
+USE_X_FORWARDED_HOST = True
+SECURE_PROXY_SSL_HEADER = None
 
-#CSRF_COOKIE_DOMAIN = os.environ['CSRF_COOKIE_DOMAIN']
+CSRF_COOKIE_DOMAIN = os.environ['CSRF_COOKIE_DOMAIN']
 
 DATA_UPLOAD_MAX_MEMORY_SIZE = 52428800
 FILE_UPLOAD_MAX_MEMORY_SIZE = 52428800
