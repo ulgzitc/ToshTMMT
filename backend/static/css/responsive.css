@@ -9,7 +9,7 @@
 	}
 
 	.navigation .navbar .navbar-nav li {
-		margin-right: 35px;
+		margin-right: 25px;
 	}
 
 	.singel-course .cont {
@@ -897,7 +897,7 @@
 	.about-items .row {
 		flex-direction: column;
 	}
-	
+
 	.main-btn {
 		padding: 0 20px;
 		font-size: 14px;

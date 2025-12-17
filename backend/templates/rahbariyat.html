@@ -29,9 +29,10 @@
     </section>
 
     
-{% for object in objects %}
+
     <section id="teachers-singel" class="pt-70 pb-120 gray-bg">
         <div class="container">
+            {% for object in objects %}
             <div class="row justify-content-center">
                 <div class="col-lg-4 col-md-8">
                     <div class="teachers-left mt-50">
@@ -74,9 +75,13 @@
                         </div> <!-- tab content -->
                     </div> <!-- teachers right -->
                 </div>
+            </div>
             </div> <!-- row -->
+            <br>
+            <br>
+            <hr>
+            {% endfor %}
         </div> <!-- container -->
     </section>
-{% endfor %}
 
 {% endblock %}
